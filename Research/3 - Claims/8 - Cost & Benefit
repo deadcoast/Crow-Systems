@@ -1,0 +1,118 @@
+# CLAIM — “Cost/benefit and PR risk reduction are compelling.”
+
+## A) Independent evidence (with links)
+
+1. **Direct SAR expense is high (per hour), and multi-asset searches compound the bill**
+
+    * A US National Weather Service report on a SAR hoax details the **USCG HH-60 helicopter operating cost at $6,530/hour** (fuel + staffing), exclusive of fixed costs and additional assets. That incident also launched surface craft. 🔗 [NWS/NOAA](https://www.weather.gov/mlb/mayday_cost)
+    * Feature analysis of SAR expenses provides a historical sampling of **hourly Coast Guard aircraft & cutter costs** and notes a full multi-asset evolution can reach **six figures**; lack of precise position (no GPS) has driven **case totals ~$240,000** in documented examples. 🔗 [Soundings: *Rescues aren’t cheap*](https://soundingsonline.com/features/rescues-arent-cheap/)
+
+2. **Cruise delays are expensive even before compensation or PR fallout**
+
+    * Industry analysis estimates **cruise ship fuel alone costs $80,000–$200,000 per day**, i.e., **$3,300–$8,300 per hour**, depending on ship size and bunker prices. This excludes knock-on costs (port fees, missed slots, overtime, comp, itinerary changes). 🔗 [Cruise Hive](https://www.cruisehive.com/how-much-does-it-cost-to-fuel-a-cruise-ship/101033)
+    * Operational research includes **arrival delay penalty** explicitly in cruise OPEX formulations, recognizing the material **cost-of-delay** component that grows with schedule disruption. 🔗 [E3S Conf. 2024 (Xi et al.)](https://www.e3s-conferences.org/articles/e3sconf/pdf/2024/42/e3sconf_uct2024_04021.pdf)
+
+3. **PR crises measurably harm brand & demand in cruising**
+
+    * Scholarly review of cruise-line crises documents **reputational damage → demand reduction → revenue loss** without effective mitigation, and stresses proactive crisis systems to reduce exposure. 🔗 [IU ScholarWorks chapter (Liu-Lastres, 2019)](https://scholarworks.indianapolis.iu.edu/bitstreams/11cad910-8761-4df7-81a4-214baf7cbe70/download)
+
+4. **MOB outcomes: rapid detection changes the story; delayed/failed searches create long, costly operations and negative coverage**
+
+    * Example **successful** case: June 29, 2025 onboard Disney *Dream*—**rapid internal response** and small-boat recovery of a child and father; media framed the incident around **effective protocols** and quick action. 🔗 [AP News](https://apnews.com/article/3333b2eced828426f1ea8df584587c58)
+    * Example **unsuccessful** case: USCG **suspends search** for a 72-year-old believed overboard from *Ruby Princess* off California (2024); aerial searches ran before termination—typical of **hours of multi-asset SAR**, significant cost, and recurring negative headlines. 🔗 [AP News](https://apnews.com/article/b1fa49fce53f0d0ad3f51bd1ae2416dd)
+
+5. **Baseline recovery odds are low; technology-assisted detection is being adopted to counter this**
+
+    * Reporting citing USCG figures notes **<19% recovery** in known MOB cases historically—context for why improving **time-to-first-visual** and **marking** has outsize value. 🔗 [gCaptain (2025 roundup)](https://gcaptain.com/cruise-industry-faces-renewed-calls-for-man-overboard-tech-after-father-daughter-rescue/)
+    * Major lines are now **deploying overboard detection tech** and publicizing rescues, explicitly linking tech to improved outcomes and reputational benefit. 🔗 [USA TODAY](https://www.usatoday.com/story/travel/cruises/2025/06/30/cruise-ship-overboard-detection-systems/84416767007/)
+
+**Implication:** Even **one** prolonged MOB search can consume **six-figure** SAR expense and trigger **itinerary delays** (fuel + operations) plus **PR risk**; systems that **cut detection time** and **enable immediate buoy/strobe drops** reduce both **cash outlay** and **headline risk**.
+
+---
+
+## B) Additional research points (expand with linked sources)
+
+* **Expected-value model of a diverted/loitering cruise**: use fuel/hour (above) + **port/slot penalties** and **crew overtime** (industry reports) to quantify the hourly burn rate for a delay caused by MOB search. (Pair with schedule-disruption literature recognizing delay penalties.) 🔗 [Fuel/OPEX: Cruise Hive](https://www.cruisehive.com/how-much-does-it-cost-to-fuel-a-cruise-ship/101033) • 🔗 [E3S 2024 (delay penalty)](https://www.e3s-conferences.org/articles/e3sconf/pdf/2024/42/e3sconf_uct2024_04021.pdf)
+* **Media-exposure valuation**: derive PR-risk proxy by counting national stories per MOB and applying **advertising value equivalency (AVE)** or **share-of-voice shifts** (communications literature). 🔗 [Liu-Lastres 2019](https://scholarworks.indianapolis.iu.edu/bitstreams/11cad910-8761-4df7-81a4-214baf7cbe70/download)
+* **Case library** of MOB timelines: extract **alarm→detection→recovery** from AP/USCG reports for the last 3–5 years; label **assets launched** (helo/cutters), **search duration**, and **result** to parameterize the EV model. 🔗 [AP—examples above](https://apnews.com/article/b1fa49fce53f0d0ad3f51bd1ae2416dd)
+* **Counterfactual savings** study: simulate identical incidents with/without **MOB-1** (auto-launch IRD + pilot) using **USCG search theory (POS = POC×POD)** to show **earlier first-visual** → **fewer SAR hours** + **shorter loiter**. 🔗 [USCG *Theory of Search*](https://navcen.uscg.gov/sites/default/files/pdf/Theory_of_Search.pdf)
+
+---
+
+## C) Quantitative thresholds (business-plan ready)
+
+* **Marginal SAR cost avoided**: **$6,530/hr (helicopter)** × **H hours** + cutter/boat hours (per-asset multipliers) is reducible when **first visual** occurs early and survivor is **marked with strobe/dye** for ship recovery or short-range asset. 🔗 [NOAA/NWS](https://www.weather.gov/mlb/mayday_cost)
+* **Delay burn rate (fuel only)**: **$3.3k–$8.3k per hour** (fuel), plus **schedule penalties** and **compensation**; many MOB searches last **multiple hours** even when suspended without recovery. 🔗 [Cruise Hive](https://www.cruisehive.com/how-much-does-it-cost-to-fuel-a-cruise-ship/101033) • 🔗 [AP suspension example](https://apnews.com/article/b1fa49fce53f0d0ad3f51bd1ae2416dd)
+* **PR downside frequency**: with **hundreds of MOB events** over two decades and **success rates <20%**, the expected number of negative headlines per year for a large brand is non-trivial; each high-visibility case imposes **brand and revenue impact** per crisis-management literature. 🔗 [gCaptain](https://gcaptain.com/cruise-industry-faces-renewed-calls-for-man-overboard-tech-after-father-daughter-rescue/) • 🔗 [Liu-Lastres 2019](https://scholarworks.indianapolis.iu.edu/bitstreams/11cad910-8761-4df7-81a4-214baf7cbe70/download)
+
+---
+
+## D) Binder-ready statements (paste-in)
+
+* “A single multi-asset MOB search can cost **five to six figures** in **USCG SAR hours** alone; early UAV visual/marking enables **ship-effected recovery** or a **shorter, localized search**, reducing **helicopter and cutter hours** materially.” ([National Weather Service][1])
+* “Cruise delay costs accumulate at **$3–8k/hour in fuel** before port/slot penalties, overtime, or compensation; cutting **loiter and search time** has immediate OPEX benefit.” ([Cruise Hive][2])
+* “Crisis-communication scholarship shows cruise incidents **damage reputation and demand**; visibly deploying modern MOB tech and producing **audit-grade evidence** mitigates PR exposure.” ([IU Indianapolis ScholarWorks][3])
+* “Probability-weighted UAV search (near-datum plume first) and **rapid buoy/dye/strobe drops** convert a potential **prolonged SAR** into a **controlled recovery narrative**, improving **POS** and **reducing cost/PR risk**.” ([IU Indianapolis ScholarWorks][3])
+
+---
+
+## E) Evidence table
+
+| Cost/Risk Driver | Evidence            | Key datum                                           | Business translation                    |
+| ---------------- | ------------------- | --------------------------------------------------- | --------------------------------------- |
+| SAR hourly cost  | NOAA/NWS; Soundings | **$6,530/hr** (HH-60); six-figure multi-asset cases | Quantify avoided helo/cutter hours      |
+| Fuel (delay)     | Cruise Hive         | **$80–200k/day** → **$3.3–8.3k/hr**                 | OPEX savings per hour of search avoided |
+| PR risk          | Academic review     | Reputation/demand loss after crises                 | ROI via avoided negative cycles         |
+| Outcome variance | AP case studies     | Rapid detection → rescue; delayed → suspended       | Value of earlier detection/marking      |
+| Baseline success | gCaptain/USCG cites | **<19%** recovery in known MOBs                     | Large upside to improved first-visual   |
+
+---
+
+## F) Executive one-liner
+
+“Every hour of a MOB search burns **thousands in fuel** and **helicopter/cutter costs**, while each high-profile loss drives **reputation damage** and revenue risk; MOB-1’s **fast, probability-weighted detection** and **buoy/dye/strobe marking** compress SAR time, **reduce OPEX**, and **lower PR exposure**—a cost/benefit that pays for itself across even a single avoided prolonged search.”
+
+---
+
+## Payload BOM — **Model Inputs for Cost/Benefit** (place this page before Sources)
+
+| Input                              | Source/Link                                                        |                   Baseline/Range | How it’s used in model                     |
+| ---------------------------------- | ------------------------------------------------------------------ | -------------------------------: | ------------------------------------------ |
+| **USCG helo hourly cost**          | NOAA/NWS hoax case (HH-60 = **$6,530/hr**) → extrapolate per asset |                  $6.5k/hr (helo) | SAR cost/hour saved by earlier visual/mark |
+| **Cutter/boat hourly cost**        | Soundings sampling of CG asset costs                               |        Varies; see article table | Add per-asset cost to SAR scenarios        |
+| **Fuel burn (delay)**              | Cruise Hive                                                        |      $80–200k/day → $3.3–8.3k/hr | Delay OPEX while loiter/search             |
+| **Search duration (unsuccessful)** | AP suspension example(s)                                           |       Multi-hour sorties typical | Hours × (fuel + SAR assets)                |
+| **Baseline recovery rate**         | gCaptain citing USCG (<19%)                                        |                             <19% | Prior for outcome; scenario frequency      |
+| **Crisis impact factor**           | Liu-Lastres (2019)                                                 |    Qualitative→quant (PR/demand) | Shadow price for PR headline cycles        |
+| **MOB-1 effect size**              | From Claims 1–6 (TTFV, Pdet)                                       | e.g., 40–60% TTFV cut; Pdet ≥0.8 | Feed into hours-saved & success uplift     |
+| **Probability weighting uplift**   | USCG Theory of Search / SAROPS                                     |                 POS ↑ vs uniform | Converts endurance to detection odds       |
+| **Dye/strobe benefit**             | Claim 5 sources                                                    |      Marking reduces search span | Minutes saved → asset hours avoided        |
+
+**Output metrics:** (a) **SAR cost avoided** per MOB; (b) **Delay OPEX avoided**; (c) **Expected PR-exposure reduction** (count of national-coverage articles × AVE proxy); (d) **Break-even MOB count** for CAPEX/OPEX.
+
+---
+
+## Sources (live links)
+
+* **USCG SAR theory (for POS modeling in ROI)** — *Theory of Search – A Simplified Explanation* (USCG). [https://navcen.uscg.gov/sites/default/files/pdf/Theory_of_Search.pdf](https://navcen.uscg.gov/sites/default/files/pdf/Theory_of_Search.pdf) ([IU Indianapolis ScholarWorks][3])
+* **USCG asset cost example** — HH-60 **$6,530/hr** (NOAA/NWS). [https://www.weather.gov/mlb/mayday_cost](https://www.weather.gov/mlb/mayday_cost) ([National Weather Service][1])
+* **SAR cost sampling & six-figure cases** — *Rescues aren’t cheap*. [https://soundingsonline.com/features/rescues-arent-cheap/](https://soundingsonline.com/features/rescues-arent-cheap/) ([Soundings Online][4])
+* **Cruise fuel cost/day** — Cruise Hive. [https://www.cruisehive.com/how-much-does-it-cost-to-fuel-a-cruise-ship/101033](https://www.cruisehive.com/how-much-does-it-cost-to-fuel-a-cruise-ship/101033) ([Cruise Hive][2])
+* **Operations research: arrival delay penalty in cruise OPEX** — Xi et al., 2024. [https://www.e3s-conferences.org/articles/e3sconf/pdf/2024/42/e3sconf_uct2024_04021.pdf](https://www.e3s-conferences.org/articles/e3sconf/pdf/2024/42/e3sconf_uct2024_04021.pdf) ([e3s-conferences.org][5])
+* **PR impact in cruise crises** — Liu-Lastres (2019). [https://scholarworks.indianapolis.iu.edu/bitstreams/11cad910-8761-4df7-81a4-214baf7cbe70/download](https://scholarworks.indianapolis.iu.edu/bitstreams/11cad910-8761-4df7-81a4-214baf7cbe70/download) ([IU Indianapolis ScholarWorks][3])
+* **Case: search suspended (multi-hour SAR)** — AP News, *Ruby Princess* (2024). [https://apnews.com/article/b1fa49fce53f0d0ad3f51bd1ae2416dd](https://apnews.com/article/b1fa49fce53f0d0ad3f51bd1ae2416dd) ([AP News][6])
+* **Case: rapid rescue narrative** — AP News, Disney *Dream* (2025). [https://apnews.com/article/3333b2eced828426f1ea8df584587c58](https://apnews.com/article/3333b2eced828426f1ea8df584587c58) ([AP News][7])
+* **Industry adoption headlines / recovery rate context** — gCaptain (2025). [https://gcaptain.com/cruise-industry-faces-renewed-calls-for-man-overboard-tech-after-father-daughter-rescue/](https://gcaptain.com/cruise-industry-faces-renewed-calls-for-man-overboard-tech-after-father-daughter-rescue/) ([gCaptain][8])
+* **Background (recent MOB headlines)** — e.g., People.com (2025) for disruption context. [https://people.com/royal-caribbean-crew-member-dies-after-stabbing-fellow-worker-jumping-off-ship-11779676](https://people.com/royal-caribbean-crew-member-dies-after-stabbing-fellow-worker-jumping-off-ship-11779676) ([People.com][9])
+
+---
+
+[1]: https://www.weather.gov/mlb/mayday_cost?utm_source=chatgpt.com "cost for mayday hoax"
+[2]: https://www.cruisehive.com/how-much-does-it-cost-to-fuel-a-cruise-ship/101033?utm_source=chatgpt.com "How Much Does it Cost to Fuel a Cruise Ship?"
+[3]: https://scholarworks.indianapolis.iu.edu/bitstreams/11cad910-8761-4df7-81a4-214baf7cbe70/download?utm_source=chatgpt.com "Managing Cruise Lines' Reputation during Crisis Times"
+[4]: https://soundingsonline.com/features/rescues-arent-cheap/?utm_source=chatgpt.com "Rescues aren't cheap"
+[5]: https://www.e3s-conferences.org/articles/e3sconf/pdf/2024/42/e3sconf_uct2024_04021.pdf?utm_source=chatgpt.com "Study on cruise speed optimization and refueling strategy ..."
+[6]: https://apnews.com/article/b1fa49fce53f0d0ad3f51bd1ae2416dd?utm_source=chatgpt.com "Search suspended for man believed to have gone overboard from cruise ship off California's coast"
+[7]: https://apnews.com/article/3333b2eced828426f1ea8df584587c58?utm_source=chatgpt.com "Disney cruise ship rescue team saves girl and father after overboard fall"
+[8]: https://gcaptain.com/cruise-industry-faces-renewed-calls-for-man-overboard-tech-after-father-daughter-rescue/?utm_source=chatgpt.com "Cruise Industry Faces Renewed Calls for Man Overboard ..."
+[9]: https://people.com/royal-caribbean-crew-member-dies-after-stabbing-fellow-worker-jumping-off-ship-11779676?utm_source=chatgpt.com "Royal Caribbean Crew Member Stabbed Fellow Worker Before Jumping Off Ship to His Death"
