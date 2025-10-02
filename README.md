@@ -1,6 +1,6 @@
 # CROW Drone Systems
 
-> **Coastal Rescue Operations with Wings** - Advanced UAV-based maritime search and rescue systems
+> **Cruise Overboard Watch (CROW)** - Advanced UAV-based maritime search and rescue systems
 
 [![Documentation Status](https://img.shields.io/badge/Documentation-Complete-brightgreen)](./INDEX.md)
 [![Standards Compliance](https://img.shields.io/badge/Standards-Markdownlint%20Compliant-blue)](./.markdownlint.jsonc)
@@ -8,7 +8,11 @@
 
 ## Project Overview
 
-The CROW (Coastal Rescue Operations with Wings) Drone Systems project represents a comprehensive research and development initiative focused on deploying unmanned aerial vehicles (UAVs) for maritime search and rescue operations. This repository contains the complete technical documentation suite supporting the development of advanced drone-based rescue systems.
+Cruide Overboard Watch (CROW) Drone Systems project represents a:
+    - comprehensive research and development initiative
+      focused on deploying unmanned aerial vehicles (UAVs) for maritime search and rescue operations
+    - This repository contains the complete technical documentation suite supporting
+      the development of advanced drone-based rescue systems.
 
 ### Key Features
 
@@ -35,6 +39,7 @@ The CROW (Coastal Rescue Operations with Wings) Drone Systems project represents
 ### System Components
 
 #### Deployment Module (Claim 5)
+
 - **Inflatable Rescue Pod**: SOS Marine "Little Ripper" (798g packed)
 - **CO₂ Cartridge**: 33g standard marine inflator
 - **Strobe Light**: MED/SOLAS-approved lifebuoy light
@@ -42,12 +47,14 @@ The CROW (Coastal Rescue Operations with Wings) Drone Systems project represents
 - **Release Mechanism**: Mavic 3E drop kit (70g, ≤1kg load capacity)
 
 #### Payload System (Claim 6)
+
 - **Drift Model Input**: NOAA SAROPS particle drift simulation
 - **Environmental Data**: NOAA/NWS wind & current feeds
 - **Onboard Compute**: NVIDIA Jetson edge module (~150g)
 - **Data Link**: LTE/5G or satcom modem (~200g)
 
 #### Evidence & Audit Module (Claim 7)
+
 - **Time Sync Core**: RFC 5905 (NTPv4), IEEE 1588 PTP
 - **Evidence Encoder**: Dual-stream 4K RGB + IR with UTC stamping
 - **Immutable Storage**: NIST FIPS 180-4 (SHA-256) with WORM bucket
