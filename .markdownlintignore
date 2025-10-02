@@ -1,3 +1,20 @@
-# Ignore index files
-(index)*.md
-**/(index)*.md
+# Corvus Documentation - Ignore patterns
+# Temporary and generated files
+
+# Temporary files
+*.tmp
+*.temp
+throwaway.md
+throwayway.md
+
+# Test files
+*test*
+*temp*
+
+# Generated documentation
+docs/generated/
+docs/build/
+
+# Legacy files
+*.old
+*.backup

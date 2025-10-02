@@ -45,13 +45,7 @@ Format: `Principal -> Teacher -> Parent -> Child`
    3. `+` is used to concatenate.
    4. `=` is used to assign.
    5. `"` is used to encase natural language taskstrings.
-   6. `|` is used to pipe or chain operations.
-   7. `&` is used to combine conditions.
-   8. `!` is used to negate conditions.
-   9. `?` is used to make conditions optional.
-   10. `*` is used to repeat or multiply operations.
-   11. `#` is used to reference or link elements.
-   12. `@` is used to reference external resources.
+   6. `><` is used to pipe or chain sequences, this is a BYPRODUCT of proper Parent Bracket pairing.
 
 ## DIRECTIVES A:`direc`) ##
 
@@ -65,41 +59,104 @@ RULES:
     - Only one directive per bracket pair
     - Directives can contain commands, variables, and options
 
-### DEVELOP (A:`DEV`) ##
+### DEVELOP (A:`DEV`) ###
 
-- Directive to develop or complete logic for the Directive.
+USAGE:
+    - Directive to develop or complete logic for a system component
+    - Other Language Example:
+      - `def` function definition in Python
+    - `corvus` Syntax Examples:
+     `<!-- <<DEV:req={type:adherence}><syntax:opinion={strict:dep=(design_format)}>+<completion:str[oper, var, opt, dirv, cmd, nl]:(dep:corvus_design)> -->`
+      - `<!-- <<DEV:{module:auth}><req:{security:oauth2}><validation:{input:email}>+<output:{format:json}> -->`
+      - `<!-- <<DEV:{api:endpoint}><method:{type:post}><schema:{fields:name,email,password}>+<validation:{required:true}> -->`
 
-### `ASSIGN` (A:`ASGN`) Assign a value to a variable ###
+### ASSIGN (A:`ASGN`) ###
 
-- Directive to assign a value to a variable.
+USAGE:
+    - Directive to assign a value to a variable or property
+    - Other Language Example:
+      - `=` assignment operator in Python
+    - `corvus` Syntax Examples:
+      - `<!-- <ASGN:{sys:admin}><{sys_output:corvus}> -->`
+      - `<!-- <ASGN:{config:database}><{url:postgresql://prod/db}><{env:production}>+<{timeout:30}> -->`
+      - `<!-- <ASGN:{user:permissions}><{role:editor}><{access:admin}>+<{scope:global}> -->`
 
-### `SET` (A:`SET`) Set a property to a value ###
+### SET (A:`SET`) ###
 
-- Directive to set a property to a value.
+USAGE:
+    - Directive to set a property or configuration value
+    - Other Language Example:
+      - `set()` function in Python
+    - `corvus` Syntax Examples:
+      - `<!-- <<SET:{formatting_style:professional_document}><format:corvus>> -->`
+      - `<!-- <<SET:{debug:mode}><level:{type:verbose}><output:{destination:console}>+<{file:debug.log}> -->`
+      - `<!-- <<SET:{api:config}><timeout:{value:30}><unit:{type:seconds}>+<retries:{count:3}> -->`
 
-### `TASK` (A:`TASK`) Set a task to be completed ###
+### TASK (A:`TASK`) ###
 
-- Directive to set a task to be completed.
+USAGE:
+    - Directive to define a task or objective to be completed
+    - Other Language Example:
+      - `import` statement in Python
+    - `corvus` Syntax Examples:
+      - `<!-- <<TASK:[nl]"Design a Professional Format for the corvus syntax">+<priority:{level:critical}>+<deadline:{date:2024-01-15}> -->`
+      - `<!-- <<TASK:[nl]"Implement user authentication system">+<req:{security:oauth2}><validation:{input:email}>+<output:{format:jwt}> -->`
+      - `<!-- <<TASK:[nl]"Create API documentation">+<format:{type:openapi}><version:{spec:3.0}>+<style:{theme:professional}> -->`
 
-### `ENFORCE` (A:`ENFR`) Enforce a rule ###
+### ENFORCE (A:`ENFR`) ###
 
-- Directive to enforce a rule.
+USAGE:
+    - Directive to enforce a rule or standard
+    - Other Language Example:
+      - `assert` statement in Python
+    - `corvus` Syntax Examples:
+      - `<!-- <<ENFR:corvus{.markdownlint.jsonc}> -->`
+      - `<!-- <<ENFR:{code_style:pep8}><validation:{strict:true}><auto_fix:{enabled:true}>+<{ignore:legacy}> -->`
+      - `<!-- <<ENFR:{security:ssl}><cert:{type:wildcard}><validation:{strict:true}>+<{expiry:90_days}> -->`
 
-### `CREATE` (A:`CRT`) Create a new element ###
+### CREATE (A:`CRT`) ###
 
-- Directive to create a new element or resource.
+USAGE:
+    - Directive to create a new element, resource, or component
+    - Other Language Example:
+      - `class` definition in Python
+    - `corvus` Syntax Examples:
+      - `<!-- <<CREATE:{file:config.json}><type:{format:json}><schema:{validation:strict}>+<{backup:true}> -->`
+      - `<!-- <<CREATE:{database:user_table}><schema:{fields:name,email,password}><index:{unique:email}>+<{constraints:not_null}> -->`
+      - `<!-- <<CREATE:{api:endpoint}><method:{type:post}><auth:{required:true}><rate_limit:{requests:100}><per:{time:minute}> -->`
 
-### `UPDATE` (A:`UPD`) Update an existing element ###
+### UPDATE (A:`UPD`) ###
 
-- Directive to update an existing element or resource.
+USAGE:
+    - Directive to update an existing element or resource
+    - Other Language Example:
+      - `.update()` method in Python dictionaries
+    - `corvus` Syntax Examples:
+      - `<!-- <<UPDATE:{config:database_url}><value:{new:postgresql://prod/db}><migration:{backup:true}>+<{validation:connection_test}> -->`
+      - `<!-- <<UPDATE:{user:permissions}><add:{role:editor}><scope:{resources:documents}>+<{expiry:2024-12-31}> -->`
+      - `<!-- <<UPDATE:{api:version}><bump:{from:v1.0,to:v1.1}><breaking_changes:{count:2}>+<{migration_guide:required}> -->`
 
-### `DELETE` (A:`DEL`) Delete an element ###
+### DELETE (A:`DEL`) ###
 
-- Directive to delete an element or resource.
+USAGE:
+    - Directive to delete an element or resource
+    - Other Language Example:
+      - `del` statement in Python
+    - `corvus` Syntax Examples:
+      - `<!-- <<DELETE:{file:temp_data.json}><backup:{location:archive}>+<{confirmation:required}> -->`
+      - `<!-- <<DELETE:{user:inactive_accounts}><condition:{status:inactive}><grace_period:{days:30}>+<{notification:email}> -->`
+      - `<!-- <<DELETE:{cache:expired_entries}><cleanup:{frequency:daily}><threshold:{age:7_days}>+<{log:deleted_count}> -->`
 
-### `VALIDATE` (A:`VAL`) Validate a condition ###
+### VALIDATE (A:`VAL`) ###
 
-- Directive to validate a condition or requirement.
+USAGE:
+    - Directive to validate a condition, requirement, or data integrity
+    - Other Language Example:
+      - `isinstance()` function in Python
+    - `corvus` Syntax Examples:
+      - `<!-- <<VALIDATE:{input:email_format}><pattern:{regex:^[\w\.-]+@[\w\.-]+\.[a-zA-Z]{2,}$}><sanitize:{trim:true}>+<{error_message:invalid_email}> -->`
+      - `<!-- <<VALIDATE:{config:required_fields}><check:{missing:api_key,database_url}><severity:{level:critical}>+<{auto_fix:false}> -->`
+      - `<!-- <<VALIDATE:{data:user_permissions}><verify:{access:admin,role:editor}><scope:{resources:all}>+<{audit_log:enabled}> -->`
 
 ## VARIABLES (A:`var`) ##
 
@@ -113,51 +170,147 @@ RULES:
 
 ### System (A:`sys`) ###
 
-- Variable for system-level configurations and settings.
+USAGE:
+    - Variable for system-level configurations and settings
+    - Other Language Example:
+      - `system` in Python
+    - `corvus` Syntax Examples:
+      - `{sys:admin}`
+      - `{sys:production}`
+      - `{sys:debug_mode}`
+      - `{sys:database_url}`
 
 ### Output (A:`output`) ###
 
-- Variable for output formats and destinations.
+USAGE:
+    - Variable for output formats and destinations
+    - Other Language Example:
+      - `output` in Python
+    - `corvus` Syntax Examples:
+      - `{output:console}`
+      - `{output:file}`
+      - `{output:json}`
+      - `{output:corvus}`
 
 ### Input (A:`input`) ###
 
-- Variable for input sources and formats.
+USAGE:
+    - Variable for input sources and formats
+    - Other Language Example:
+      - `input` in Python
+    - `corvus` Syntax Examples:
+      - `{input:user}`
+      - `{input:file}`
+      - `{input:api}`
+      - `{input:database}`
 
 ### Format (A:`format`) ###
 
-- Variable for formatting specifications.
+USAGE:
+    - Variable for formatting specifications
+    - Other Language Example:
+      - `format` in Python
+    - `corvus` Syntax Examples:
+      - `{format:json}`
+      - `{format:yaml}`
+      - `{format:markdown}`
+      - `{format:corvus}`
 
 ### Style (A:`style`) ###
 
-- Variable for styling and presentation options.
+USAGE:
+    - Variable for styling and presentation options
+    - Other Language Example:
+      - `style` in Python
+    - `corvus` Syntax Examples:
+      - `{style:professional}`
+      - `{style:minimal}`
+      - `{style:verbose}`
+      - `{style:compact}`
 
 ### Dependency (A:`dep`) ###
 
-- Variable for dependency management and relationships.
+USAGE:
+    - Variable for dependency management and relationships
+    - Other Language Example:
+      - `dep` in Python
+    - `corvus` Syntax Examples:
+      - `{dep:database}`
+      - `{dep:api_service}`
+      - `{dep:authentication}`
+      - `{dep:logging}`
 
 ### Require (A:`req`) ###
 
-- Variable for requirement specifications.
+USAGE:
+    - Variable for requirement specifications
+    - Other Language Example:
+      - `req` in Python
+    - `corvus` Syntax Examples:
+      - `{req:python>=3.8}`
+      - `{req:authentication}`
+      - `{req:ssl_certificate}`
+      - `{req:admin_access}`
 
 ### Execute (A:`exec`) ###
 
-- Variable for execution parameters and settings.
+USAGE:
+    - Variable for execution parameters and settings
+    - Other Language Example:
+      - `exec` in Python
+    - `corvus` Syntax Examples:
+      - `{exec:sync}`
+      - `{exec:async}`
+      - `{exec:background}`
+      - `{exec:immediate}`
 
 ### Configure (A:`config`) ###
 
-- Variable for configuration values and settings.
+USAGE:
+    - Variable for configuration values and settings
+    - Other Language Example:
+      - `config` in Python
+    - `corvus` Syntax Examples:
+      - `{config:database}`
+      - `{config:api_keys}`
+      - `{config:logging}`
+      - `{config:security}`
 
 ### Process (A:`proc`) ###
 
-- Variable for processing parameters and data.
+USAGE:
+    - Variable for processing parameters and data
+    - Other Language Example:
+      - `proc` in Python
+    - `corvus` Syntax Examples:
+      - `{proc:validate}`
+      - `{proc:transform}`
+      - `{proc:filter}`
+      - `{proc:aggregate}`
 
 ### Generate (A:`gen`) ###
 
-- Variable for generation settings and options.
+USAGE:
+    - Variable for generation settings and options
+    - Other Language Example:
+      - `gen` in Python
+    - `corvus` Syntax Examples:
+      - `{gen:documentation}`
+      - `{gen:code}`
+      - `{gen:reports}`
+      - `{gen:templates}`
 
 ### Transform (A:`trans`) ###
 
-- Variable for transformation parameters and rules.
+USAGE:
+    - Variable for transformation parameters and rules
+    - Other Language Example:
+      - `trans` in Python
+    - `corvus` Syntax Examples:
+      - `{trans:format}`
+      - `{trans:structure}`
+      - `{trans:encoding}`
+      - `{trans:validation}`
 
 ## COMMANDS (A:`cmd`) ##
 
@@ -171,35 +324,91 @@ RULES:
 
 ### SET (A:`set`) ###
 
-- Command to set a property or value.
+USAGE:
+    - Command to set a property or value
+    - Other Language Example:
+      - `set()` function in Python
+    - `corvus` Syntax Examples:
+      - `<<SET:{formatting_style:professional_document}><format:corvus>>`
+      - `<<SET:{debug:mode}><level:{type:verbose}><output:{destination:console}>+<{file:debug.log}>>`
+      - `<<SET:{api:config}><timeout:{value:30}><unit:{type:seconds}>+<retries:{count:3}>>`
 
 ### GET (A:`get`) ###
 
-- Command to retrieve a property or value.
+USAGE:
+    - Command to retrieve a property or value
+    - Other Language Example:
+      - `.get()` method in Python dictionaries
+    - `corvus` Syntax Examples:
+      - `<<GET:{user:permissions}><scope:{resources:documents}><format:{type:json}>>`
+      - `<<GET:{config:database_url}><env:{type:production}><validate:{connection:true}>+<{cache:ttl_300}>>`
+      - `<<GET:{api:version}><endpoint:{path:/version}><auth:{required:true}>+<{headers:content_type}>>`
 
 ### CALL (A:`call`) ###
 
-- Command to call a function or method.
+USAGE:
+    - Command to call a function or method
+    - Other Language Example:
+      - Function call syntax in Python
+    - `corvus` Syntax Examples:
+      - `<<CALL:{validate:email}><input:{format:string}><pattern:{regex:email}>+<{error_handling:strict}>>`
+      - `<<CALL:{process:data}><input:{source:user_data}><transform:{type:normalize}>+<{output:structured}>>`
+      - `<<CALL:{generate:report}><template:{type:professional}><data:{source:database}>+<{format:pdf}>`
 
 ### RUN (A:`run`) ###
 
-- Command to run a process or script.
+USAGE:
+    - Command to run a process or script
+    - Other Language Example:
+      - `subprocess.run()` in Python
+    - `corvus` Syntax Examples:
+      - `<<RUN:{script:deploy.sh}><env:{type:production}><timeout:{seconds:300}>+<{log:verbose}>>`
+      - `<<RUN:{test:unit_tests}><coverage:{threshold:80}><parallel:{workers:4}>+<{report:html}>>`
+      - `<<RUN:{build:docker_image}><tag:{version:latest}><registry:{host:dockerhub}>+<{push:true}>>`
 
 ### BUILD (A:`build`) ###
 
-- Command to build or compile resources.
+USAGE:
+    - Command to build or compile resources
+    - Other Language Example:
+      - `python -m build` command in Python
+    - `corvus` Syntax Examples:
+      - `<<BUILD:{package:wheel}><format:{type:universal}><target:{python:3.8+}>+<{sign:true}>>`
+      - `<<BUILD:{docker:image}><base:{os:alpine}><layers:{optimize:true}>+<{security:scan}>>`
+      - `<<BUILD:{docs:html}><theme:{style:professional}><navigation:{depth:3}>+<{search:enabled}>>`
 
 ### TEST (A:`test`) ###
 
-- Command to test or validate functionality.
+USAGE:
+    - Command to test or validate functionality
+    - Other Language Example:
+      - `pytest` command in Python
+    - `corvus` Syntax Examples:
+      - `<<TEST:{unit:user_auth}><coverage:{threshold:90}><parallel:{workers:auto}>+<{report:xml}>>`
+      - `<<TEST:{integration:api}><endpoints:{count:all}><auth:{required:true}>+<{mock:external}>>`
+      - `<<TEST:{coverage:report}><format:{type:html}><threshold:{line:80,branch:70}>+<{fail_under:75}>>`
 
 ### DEPLOY (A:`deploy`) ###
 
-- Command to deploy or publish resources.
+USAGE:
+    - Command to deploy or publish resources
+    - Other Language Example:
+      - `pip install` command in Python
+    - `corvus` Syntax Examples:
+      - `<<DEPLOY:{app:production}><strategy:{type:rolling}><health_check:{enabled:true}>+<{rollback:auto}>>`
+      - `<<DEPLOY:{package:pypi}><repository:{name:testpypi}><version:{auto:increment}>+<{twine:check}>>`
+      - `<<DEPLOY:{docs:github_pages}><branch:{name:gh-pages}><build:{source:docs}>+<{custom_domain:docs.example.com}>>`
 
 ## OPTIONS (A:`opt`) ##
 
-RARE USES CASES WHEN VARIABLES REQUIRE OPTIONS.
+USAGE:
+    - Options are used to provide additional parameters
+    - Other Language Example:
+      - Function parameters in Python
+    - `corvus` Syntax Examples:
+      - `(option1, option2)`
+      - `(debug:true, verbose:false)`
+      - `(timeout:30, retries:3)`
 
 - OPTIONS UTILIZE `( )` brackets.
 
@@ -235,6 +444,8 @@ RULES:
     - Brackets can contain other bracket types
 
 ## EXAMPLE ##
+
+### Source of Truth Example ###
 
 ```crow
 >1| <!-- <ASGN:{sys:admin}><{sys_output:corvus}>>
@@ -390,23 +601,39 @@ The corvus format follows a hierarchical structure:
 ### Common Patterns ###
 
 1. **Simple Assignment:**
+
    ```crow
-   <!-- <ASGN:{variable:value}> -->
+   <!-- <ASGN:{sys:admin}><{sys_output:corvus}> -->
    ```
 
 2. **Command Execution:**
+
    ```crow
-   <<COMMAND:{parameter:value}>>
+   <<SET:{formatting_style:professional_document}><format:corvus>>
    ```
 
 3. **Task Definition:**
+
    ```crow
-   <<TASK:[nl]"Natural language description">>
+   <<TASK:[nl]"Design a Professional Format for the corvus syntax">+<priority:{level:critical}>>
    ```
 
 4. **Dependency Management:**
+
    ```crow
-   <<DEP:{dependency:version}><req:{requirement:specification}>>
+   <<DEV:req={type:adherence}><syntax:opinion={strict:dep=(design_format)}>+<completion:str[oper, var, opt, dirv, cmd, nl]:(dep:corvus_design)>
+   ```
+
+5. **Property Setting:**
+
+   ```crow
+   <completion:str[oper, var, opt, dirv, cmd, nl]:(dep:corvus_design)>+<dep:corvus={corvus_design}>
+   ```
+
+6. **Variable with Options:**
+
+   ```crow
+   {syntax:opinion={strict:dep=(design_format)}}>(type:adherence, completion:str)
    ```
 
 ### Best Practices ###
@@ -422,3 +649,30 @@ The corvus format follows a hierarchical structure:
 - Use consistent spacing around operators
 - Validate syntax before committing changes
 - Test examples to ensure they follow the defined rules
+
+### Real-World Examples ###
+
+#### Configuration Management ####
+
+```crow
+<!-- <ASGN:{sys:production}><{database_url:postgresql://prod/db}><{env:production}>+
+   <<SET:{debug_mode:false}><log_level:{type:info}><output:{destination:file}>+<{rotation:daily}>>
+   <<ENFR:{ssl:required}><cert:{type:wildcard}><validation:{strict:true}>+<{expiry:90_days}>> -->
+```
+
+#### Development Workflow ####
+
+```crow
+<!-- <<TASK:[nl]"Implement user authentication system">+<priority:{level:high}>+
+   <<DEV:{module:auth}><req:{security:oauth2}><validation:{input:email}>+<{output:jwt_token}>>
+   <<TEST:{unit:auth_functions}><coverage:{threshold:90}><parallel:{workers:auto}>+<{report:xml}>>
+   <<DEPLOY:{staging:true}><strategy:{type:blue_green}><health_check:{enabled:true}>+<{rollback:auto}>> -->
+```
+
+#### Data Processing ####
+
+```crow
+<<PROC:{input:user_data}><validate:{email:true}><sanitize:{trim:true}>+<{error_handling:strict}>>
+<<TRANS:{format:json}><structure:{normalize:true}><schema:{validation:strict}>+<{output:api_response}>>
+<<GEN:{report:user_summary}><template:{type:professional}><data:{source:processed}>+<{format:pdf}>>
+```
