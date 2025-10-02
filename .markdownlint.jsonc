@@ -1,0 +1,65 @@
+{
+  // Corvus Documentation Format Configuration
+  // This configuration enforces the corvus documentation format rules
+  
+  // Basic formatting rules
+  "MD013": {
+    "line_length": 120,
+    "code_blocks": false,
+    "tables": false
+  },
+  
+  // Headers
+  "MD022": false, // Allow multiple headers with same level
+  "MD025": false, // Allow multiple H1 headers for corvus sections
+  
+  // Lists
+  "MD004": { "style": "dash" }, // Use dashes for unordered lists
+  "MD029": { "style": "ordered" }, // Ordered list style
+  
+  // Code blocks
+  "MD040": false, // Allow fenced code blocks without language
+  "MD046": { "style": "fenced" }, // Use fenced code blocks
+  
+  // Links and references
+  "MD034": false, // Allow bare URLs
+  "MD033": false, // Allow HTML tags for corvus brackets
+  
+  // Line breaks and spacing
+  "MD012": false, // Allow multiple consecutive blank lines
+  "MD022": false, // Allow multiple headers with same level
+  
+  // Corvus-specific rules
+  "MD024": false, // Allow duplicate headers for corvus sections
+  "MD026": false, // Allow trailing punctuation in headers
+  "MD041": false, // Allow first line to be a header
+  
+  // Bracket validation (custom rules for corvus)
+  "MD018": false, // Allow headers without space after #
+  "MD019": false, // Allow multiple spaces after # in headers
+  
+  // Content structure
+  "MD031": false, // Allow fenced code blocks without blank lines
+  "MD032": false, // Allow lists without blank lines
+  
+  // Emphasis and formatting
+  "MD036": false, // Allow emphasis used instead of headers
+  "MD037": false, // Allow spaces inside emphasis markers
+  
+  // Tables
+  "MD013": false, // Allow long lines in tables
+  "MD012": false, // Allow multiple blank lines
+  
+  // Custom corvus bracket rules
+  "MD033": false, // Allow HTML tags for corvus syntax
+  "MD040": false, // Allow fenced code blocks without language specification
+  
+  // Documentation structure
+  "MD022": false, // Allow multiple headers at same level
+  "MD025": false, // Allow multiple H1 headers
+  "MD024": false, // Allow duplicate headers
+  
+  // Comments and annotations
+  "MD013": false, // Allow long lines for corvus syntax
+  "MD033": false // Allow HTML comments for corvus directives
+}

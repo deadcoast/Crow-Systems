@@ -1,0 +1,11 @@
+<!-- set:system_output:corvus_typer,system_prompt:corvus_typer_prompt_1 --!>
+
+set_style:professional_document_suite, set_format:CROW simple syntax--!>
+Solidify A PROFESSIONAL, ORGANIZED format for my document suite.
+
+<< TASK:
+< DESIGN A PROFESSIONAL FORMAT FOR MY USE CASE >+
+< ENFORCE IT IN A `.markdownlint.jsonc` FILE >+
+< ANY OTHER CONFIGURATION DEEMED NECESSARY TO FORMAT DESIGN REQUIREMENTS >>
+
+> SEE PYTHON STRING FOR GENERAL DOCUMENT SUITE DATA CONTENTS

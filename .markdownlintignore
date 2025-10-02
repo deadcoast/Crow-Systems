@@ -1,0 +1,3 @@
+# Ignore index files
+(index)*.md
+**/(index)*.md

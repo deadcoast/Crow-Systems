@@ -1,0 +1,24 @@
+/* Subtle, readable index styling */
+.crow_index .markdown-preview-view h1 {
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    margin-bottom: 0.25rem;
+  }
+  
+  .crow_index blockquote {
+    border-left: 3px solid var(--interactive-accent);
+    padding: 0.4rem 0.8rem;
+    margin: 0.4rem 0 0.8rem;
+    color: var(--text-muted);
+    background: color-mix(in oklab, var(--background-modifier-form-field) 60%, transparent);
+  }
+  
+  .crow_index ul, .crow_index ol {
+    margin-top: 0.4rem;
+  }
+  
+  /* If Zoottelkeeper renders a list, this gives gentle spacing */
+  .crow_index .markdown-preview-view li {
+    padding-block: 2px;
+  }
+  
