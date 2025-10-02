@@ -1,26 +1,29 @@
 
 # Drone Specifications
 
-## B1. System goals
+## System Goals
 
-- **T1: Time-to-first-visual (TTFV)** ≤ 90 s from MOB alarm in benign conditions (Sea State ≤ 3).
-- **Pdet: Detection probability** ≥ 0.8 inside the first sortie’s search area.
-- **FPR: False positive rate** ≤ 0.2/min with human-in-loop verification.
-- **CEP (beaconing):** ≤ 10 m 95% while hovering over the target in Beaufort 5.
-- **Latency:** Video/HUD < 150 ms; detector→HUD marker < 250 ms.
+- **T1: Time-to-first-visual (TTFV)**: ≤ 90 s from MOB alarm in benign conditions (Sea State ≤ 3)
+- **Pdet: Detection probability**: ≥ 0.8 inside the first sortie's search area
+- **FPR: False positive rate**: ≤ 0.2/min with human-in-loop verification
+- **CEP (beaconing)**: ≤ 10 m 95% while hovering over the target in Beaufort 5
+- **Latency**: Video/HUD < 150 ms; detector→HUD marker < 250 ms
 
 ---
 
-## B2. Core dataflow
+## Core Dataflow
 
 MOB Alarm → BIU → Dock/Drone → Pilot (HUD)
 
-1. **MOB alarm** (bridge): BIU captures `LKP` (lat/lon/time), ship heading/speed, wind (AWS/AWA), and nearest current estimate.
-2. **Auto-launch + IRD:** Drone takes off, flies to LKP, runs a **strictly bounded micro-grid** (60–120 s and ≤ 200 m radius).
-3. **BIU Drift Model** runs in parallel (see B3) and yields a **probability density map (PDM)** around LKP.
+1. **MOB alarm** (bridge): BIU captures LKP (lat/lon/time), ship heading/speed, wind (AWS/AWA), and nearest current estimate.
+2. **Auto-launch + IRD**: Drone takes off, flies to LKP, runs a strictly bounded micro-grid (60–120 s and ≤ 200 m radius).
+3. **BIU Drift Model** runs in parallel (see section B3) and yields a probability density map (PDM) around LKP.
 4. **Pilot takes control** (preempts IRD).
-5. **HUD overlays**: PDM heatmap, expanding square/sector arcs, “windage arrow,” candidate detections (IR/RGB), and “drop-point” guides.
-6. **Pilot flies the pattern** (assisted stabilization only); detections escalate to “VERIFY” with a two-stage confirm.
+5. **HUD overlays**:
+   - PDM heatmap, expanding square/sector arcs "windage arrow,"
+   - candidate detections (IR/RGB)
+   - "drop-point" guides
+6. **Pilot flies the pattern** (assisted stabilization only); detections escalate to "VERIFY" with a two-stage confirm.
 
 ---
 
@@ -34,21 +37,29 @@ $$
 
 - $(\mathbf{x}_0)$: LKP (from MOB trigger)
 - $(alpha)$: **windage coefficient** (typ. 0.02–0.04 for a head/upper torso at surface; configurable).
-- $(mathbf{\epsilon}(t))$: random walk term modeling turbulence and uncertainty (Gaussian with covariance growing with time; add heavier tails in rough seas).
+  - $(mathbf{\epsilon}(t))$: random walk term modeling turbulence and uncertainty
+  - (Gaussian with covariance growing with time; add heavier tails in rough seas)
 
 **Monte Carlo ($N$ particles):**
 
 - Initialize $N$ particles at LKP with small spatial jitter (e.g., $σ = 10–30 m$).
-- For each time step $Δt$ (e.g., $1–2 s$), propagate particles with current + $α·wind$ + random diffusion ($σ_drift$ per axis).
+- For each time step $Δt$ (e.g., $1–2 s$):
+  - propagate particles with current + $α·wind$ + random diffusion ($σ_drift$ per axis)
 - After T minutes, histogram particle positions → **$PDM$** (probability density map).
 - **Confidence ellipses** (e.g., 50/80/95%) and **centroid vector** are computed for the HUD.
 
 **Inputs:**
 
-- Ship’s anemometer for wind; onboard or forecast currents (fallback: default surface current = 0.3–0.5 m/s in open water; configurable).
+- Ship’s anemometer for wind;
+  - onboard or forecast currents
+  - (fallback: default surface current = 0.3–0.5 m/s in open water; configurable)
 - If no current data: inflate diffusion to avoid overconfidence.
 
-**What the Pilot Sees:** a heatmap “blob” drifting downwind/down-current with overlaid confidence rings and an “arrow tail” showing expected displacement over the next 2–5 minutes.
+**What the Pilot Sees:**
+
+    - a heatmap “blob” drifting downwind/down-current
+    - with overlaid confidence rings
+    - and an “arrow tail” showing expected displacement over the next 2–5 minutes.
 
 ---
 
@@ -65,7 +76,8 @@ $$
 ### B4.2 Pilot patterns (manual)
 
 - **Probability-weighted expanding square:** same geometry, **centered on PDM centroid**, not the raw LKP.
-- **Sector sweep:** center on centroid, span the **down-wind/down-current sector** first (e.g., ±45° around resultant vector), then fill remaining sectors.
+- **Sector sweep:** center on centroid, span the **down-wind/down-current sector**
+- first (e.g., ±45° around resultant vector), then fill remaining sectors.
 - **Lawnmower (lateral sweep):** if the confidence ellipse is elongated, align lanes with the major axis.
 
 **Coverage math (to size the lanes):**
@@ -76,7 +88,8 @@ Coverage rate (C = v \cdot w) (area per second).
 - **Lane spacing** (s = k \cdot w), where (k \in [0.5, 0.8]) for desired overlap.
 
   - Tighter (k=0.5) in rough seas/night; looser (k=0.8) in calm daylight.
-- **Altitude trade:** higher altitude ↑w but ↓thermal resolution; HUD suggests an altitude band that maximizes (C) without degrading IR detection confidence (see B7).
+- **Altitude trade:** higher altitude ↑w but ↓thermal resolution;
+  - HUD suggests an altitude band that maximizes (C) without degrading IR detection confidence (see B7).
 
 ---
 
@@ -88,16 +101,20 @@ Coverage rate (C = v \cdot w) (area per second).
 
 1. **Thermal pre-processing:** local contrast normalize (AGC), temporal median filter to dampen foam flicker.
 2. **IR detector:** lightweight, thermally trained CNN/YOLO-variant; threshold low (recall-biased).
-3. **Candidate gating:** eliminate blobs by **area**, **aspect**, **temperature delta** vs. local background, and **motion continuity** across frames.
-4. **RGB verify:** crop ROI in RGB stream; run a tiny classifier (yes/no “head/shoulders in water”) + color heuristics (skin tones ± clothing bright elements).
-5. **mmWave fusion (optional):** if radar pod present, require **co-located return** within 3–5 m for “strong” flag in heavy spray.
+3. **Candidate gating:** eliminate blobs by:
+    **area**, **aspect**, **temperature delta** vs
+     local background, and **motion continuity** across frames.
+4. **RGB verify:** crop ROI in RGB stream; 
+   - run a tiny classifier (yes/no “head/shoulders in water”) + color heuristics (skin tones ± clothing bright elements).
+5. **mmWave fusion (optional):** if radar pod present,
+   - require **co-located return** within 3–5 m for “strong” flag in heavy spray.
 6. **Confidence score** (S\in[0,1]) from weighted fusion (IR>RGB>mmWave).
 7. **Escalation states:**
 
    - **PING** (S≥0.4): HUD shows small yellow marker; muted chirp.
    - **ALERT** (S≥0.6): orange marker + on-screen arrow cue to turn; BIU logs.
    - **VERIFY** (S≥0.75): red marker + “HOLD/BEACON?” prompt for pilot; requires **pilot tap-confirm**.
-   - **LOCK** (pilot confirmed): Drone enters assisted hover mode (pilot can still fly), beacons enabled; **buoy drop** becomes available (two-stage confirm).
+   - **LOCK** (pilot confirmed): Drone enters assisted hover mode (pilot can still fly), beacons enabled; **buoy drop** becomes available (two-stage confirm)
 
 ---
 
@@ -105,7 +122,7 @@ Coverage rate (C = v \cdot w) (area per second).
 
 **Problem:** water clutter causes intermittent detections; we need robust state estimation.
 
-**Solution:** **Interacting Multiple Model (IMM) Kalman Filter** or **Particle Filter** for short-horizon surface target tracking.
+**Solution:** **Interacting Multiple Model (IMM) Kalman Filter** or **Particle Filter** for short-horizon surface target tracking
 
 - **State:** 2D position ((x,y)), velocity ((\dot{x},\dot{y})).
 - **Process model:** constant-velocity perturbed by drift (small random acceleration; tune Q).
@@ -145,23 +162,23 @@ At runtime, suggest an altitude band (h) that maximizes **probability of detecti
 
 ## B9. State machine in YAML
 
-```yaml
-[MOB_TRIGGER]
-   -> AUTO_LAUNCH
-   -> IRD (timer & radius caps)
-   -> {Pilot_Takeover anytime} -> PILOT_CTRL
+    ```yaml
+    [MOB_TRIGGER]
+      -> AUTO_LAUNCH
+      -> IRD (timer & radius caps)
+      -> {Pilot_Takeover anytime} -> PILOT_CTRL
 
-[PILOT_CTRL]
-   - SEARCH (patterns with PDM overlay)
-   - DETECT (PING/ALERT/VERIFY)
-   - LOCK (assisted hover, beacons on)
-   - DROP (buoy/dye if commanded)
-   - HANDOFF (maintain lock until rescue on-scene)
-   - RTB (precision dock)
+    [PILOT_CTRL]
+      - SEARCH (patterns with PDM overlay)
+      - DETECT (PING/ALERT/VERIFY)
+      - LOCK (assisted hover, beacons on)
+      - DROP (buoy/dye if commanded)
+      - HANDOFF (maintain lock until rescue on-scene)
+      - RTB (precision dock)
 
-[FAILSAFE]
-   - Link lost -> Hover + climb + BIU alert -> RTB after timeout
-```
+    [FAILSAFE]
+      - Link lost -> Hover + climb + BIU alert -> RTB after timeout
+    ```
 
 ---
 
@@ -169,60 +186,60 @@ At runtime, suggest an altitude band (h) that maximizes **probability of detecti
 
 ### B10.1 Drift Monte Carlo (BIU)
 
-```python
-def MC_drift(LKP, wind_vec, current_vec, alpha=0.03, N=5000, dt=1.0, T=600.0):
-    # LKP: (lat, lon) -> convert to local ENU (x0, y0)
-    particles = jitter_around(LKP_ENU, sigma=20.0, N=N)
-    for t in np.arange(0, T, dt):
-        V = current_vec(t) + alpha * wind_vec(t)
-        noise = np.random.normal(0, sigma_drift(dt), size=(N,2))
-        particles += V*dt + noise
-    PDM = histogram2D(particles, bins=grid_spec)
-    ellipses = confidence_ellipses(particles, levels=[0.5,0.8,0.95])
-    centroid = particles.mean(axis=0)
-    return PDM, ellipses, centroid
-```
+    ```python
+    def MC_drift(LKP, wind_vec, current_vec, alpha=0.03, N=5000, dt=1.0, T=600.0):
+        # LKP: (lat, lon) -> convert to local ENU (x0, y0)
+        particles = jitter_around(LKP_ENU, sigma=20.0, N=N)
+        for t in np.arange(0, T, dt):
+            V = current_vec(t) + alpha * wind_vec(t)
+            noise = np.random.normal(0, sigma_drift(dt), size=(N,2))
+            particles += V*dt + noise
+        PDM = histogram2D(particles, bins=grid_spec)
+        ellipses = confidence_ellipses(particles, levels=[0.5,0.8,0.95])
+        centroid = particles.mean(axis=0)
+        return PDM, ellipses, centroid
+    ```
 
 ### B10.2 Detector fusion (onboard)
 
-```python
-def detect_fuse(thermal_frame, rgb_frame):
-    ir_cands = ir_detector(thermal_frame)            # boxes + scores
-    fused = []
-    for b, s_ir in ir_cands:
-        roi_rgb = crop(rgb_frame, b.expand(margin=0.3))
-        s_rgb = rgb_classifier(roi_rgb)              # 0..1
-        s = 0.65*s_ir + 0.35*s_rgb                   # weights tunable
-        if passes_shape_temp_filters(b, thermal_frame):
-            fused.append((b, s))
-    return fused
-```
+    ```python
+    def detect_fuse(thermal_frame, rgb_frame):
+        ir_cands = ir_detector(thermal_frame)            # boxes + scores
+        fused = []
+        for b, s_ir in ir_cands:
+            roi_rgb = crop(rgb_frame, b.expand(margin=0.3))
+            s_rgb = rgb_classifier(roi_rgb)              # 0..1
+            s = 0.65*s_ir + 0.35*s_rgb                   # weights tunable
+            if passes_shape_temp_filters(b, thermal_frame):
+                fused.append((b, s))
+        return fused
+    ```
 
 ### B10.3 IMM/Tracker update
 
-```python
-def tracker_step(fused_dets, tracker):
-    if fused_dets:
-        z, R = choose_best_measurement(fused_dets)   # by score
-        tracker.update(z, R)                         # IMM or PF
-    else:
-        tracker.predict()
-    return tracker.state(), tracker.cov()
-```
+    ```python
+    def tracker_step(fused_dets, tracker):
+        if fused_dets:
+            z, R = choose_best_measurement(fused_dets)   # by score
+            tracker.update(z, R)                         # IMM or PF
+        else:
+            tracker.predict()
+        return tracker.state(), tracker.cov()
+    ```
 
 ### B10.4 HUD loop (pilot)
 
-```python
-while mission_active:
-    PDM, ellipses, centroid = get_PDM()
-    draw_heatmap(PDM); draw_ellipses(ellipses)
-    dets = detect_fuse(thermal, rgb)
-    state, cov = tracker_step(dets, tracker)
-    draw_target_markers(dets, state, cov)
-    suggest_altitude_band(sensor_model, state)
-    if pilot_confirms_lock(): enable_beacons()
-    if pilot_confirms_drop(): release_buoy_at(predicted_updrift_point(state))
-```
+    ```python
+    while mission_active:
+        PDM, ellipses, centroid = get_PDM()
+        draw_heatmap(PDM); draw_ellipses(ellipses)
+        dets = detect_fuse(thermal, rgb)
+        state, cov = tracker_step(dets, tracker)
+        draw_target_markers(dets, state, cov)
+        suggest_altitude_band(sensor_model, state)
+        if pilot_confirms_lock(): enable_beacons()
+        if pilot_confirms_drop(): release_buoy_at(predicted_updrift_point(state))
+    ```
 
 ---
 

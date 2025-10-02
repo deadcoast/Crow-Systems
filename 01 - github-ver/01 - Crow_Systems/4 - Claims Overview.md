@@ -1,8 +1,11 @@
-# Research program overview
+# Claims Overview
 
-We’ll validate each core claim with **multiple independent evidence types**: literature + bench tests + controlled drills + witnessed sea trials + audited data. Below is the map.
+## Research Program Overview
 
-## [[02 - obsidian-ver/Research/3 - Claims/1 - Drones cut time]] - “Drones cut time-to-first-visual (TTFV) dramatically.”
+We'll validate each core claim with multiple independent evidence types:
+literature + bench tests + controlled drills + witnessed sea trials + audited data. Below is the map.
+
+## 1 - Drones cut time-to-first-visual (TTFV) dramatically
 
 What to research:
 
@@ -11,7 +14,8 @@ What to research:
 
 How to support:
 
-- **Controlled A/B drills** on partner vessels: run standard MOB drill (no drone) vs identical drill with `CROW`. Randomize order; repeat across conditions.
+- **Controlled A/B drills** on partner vessels: run standard MOB drill (no drone) vs identical drill with `CROW`.
+  - Randomize order; repeat across conditions.
 - **Metrics captured:** TTFV, time-to-GPS-fix, time-to-buoy-drop, time-to-handoff to boat.
 - **Analysis:** paired comparison with confidence intervals; bootstrap for robustness; pre-registered analysis plan.
 - **Third-party witness:** class society surveyor or maritime test lab present for a subset; signed witness statements.
@@ -67,7 +71,8 @@ What to research:
 How to support:
 
 - **Environmental tests:** salt-fog (ASTM B117), ingress (IP), vibration, rain/spray rigs.
-- **Sea trials:** launches while ship maintains 3–5 kn headway; precision dock returns; turbulence handling on leeward/windward sides.
+- **Sea trials:** launches while ship maintains 3–5 kn headway;
+  - precision dock returns; turbulence handling on leeward/windward sides.
 - **Failure-mode analysis (FMEA)** with mitigations validated (e.g., beacon-only behavior in high winds).
 
 ---
@@ -81,7 +86,9 @@ What to research:
 How to support:
 
 - **Drop accuracy tests** (CEP ≤ 10 m 95%) using up-drift aim points.
-- **Visibility studies:** observer trials from rescue boat/bridge rating detectability with vs without dye/strobe at set ranges.
+- **Visibility studies:** observer trials from:
+  - Rescue boat/bridge rating detectability
+  - With vs without dye/strobe at set ranges
 
 ---
 
@@ -98,22 +105,28 @@ How to support:
 
 ---
 
-## 7) Claim: “Integration aligns with SOLAS/LSA and insurer expectations.”
+## 7) Claim: “Integration aligns with SOLAS/LSA and insurer expectations”
 
 What to research:
 
-- Regulatory landscape: SOLAS Ch. III & LSA Code (rescue boats, MOB detection), flag-state circulars, class guidance for auxiliary lifesaving equipment.
+- Regulatory landscape:
+  - SOLAS Ch. III & LSA Code (
+  - rescue boats, MOB detection)
+  - flag-state circulars
+  - class guidance for auxiliary lifesaving equipment
+
 - Insurer requirements for “reasonable available technology.”
 
 How to support:
 
-- **Regulatory matrix** mapping each `CROW` function to current clauses; document that `CROW` is **auxiliary** (not replacing boats).
+- **Regulatory matrix** mapping each `CROW` function to current clauses;
+  - document that `CROW` is **auxiliary** (not replacing boats).
 - **Letters of no-objection / statements of intent** from class societies after design review.
 - **Risk assessment** and SOPs validated in witnessed drills.
 
 ---
 
-## 8) Claim: “Cost/benefit and PR risk reduction are compelling.”
+## 8) Claim: “Cost/benefit and PR risk reduction are compelling”
 
 What to research:
 
@@ -132,8 +145,18 @@ How to support:
 
 ### Phase 0 — Desk research
 
-- Literature review: MOB survivability (cold shock/hypothermia), SAR drift (SAROPS), thermal detection at sea, existing MOB camera systems.
-- Regulatory map: SOLAS/LSA, MSC circulars, flag-state notes; class (DNV/ABS/LR) relevant test standards.
+- Literature review:
+  - MOB survivability (cold shock/hypothermia)
+  - SAR drift (SAROPS)
+  - thermal detection at sea
+  - existing MOB camera systems
+
+- Regulatory map:
+  - SOLAS/LSA
+  - MSC circulars
+  - flag-state notes
+  - class (DNV/ABS/LR) relevant test standards
+
 - Deliverable: **Evidence Landscape Brief** (citations + gaps).
 
 ### Phase 1 — Bench & environmental
@@ -199,7 +222,12 @@ How to support:
 
 ## Resourcing & partnerships
 
-- **Partners needed:** one cruise line for drills, one maritime test lab, one class society for witness days, one insurer observer.
+- **Partners needed:**
+  - one cruise line for drills
+  - one maritime test lab
+  - one class society for witness days
+  - one insurer observer
+
 - **Procurement:** certified MOB mannequins, dye/smoke (SOLAS), measurement gear, environmental test house time.
 
 ---

@@ -49,5 +49,5 @@
   // === PROFESSIONAL FORMATTING ===
   "MD036": false,  // Allow emphasis instead of headers for short content
   "MD049": { "style": "asterisk" },  // Consistent emphasis style
-  "MD050": { "style": "asterisk" }   // Consistent strong style
+  "MD050": { "style": "asterisk" }  // Consistent strong style
 }

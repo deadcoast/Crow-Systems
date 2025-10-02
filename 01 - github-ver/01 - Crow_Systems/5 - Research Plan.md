@@ -1,11 +1,11 @@
-# Supporting Research Overview
+# Research Plan
 
-## 1) Problem sizing & survivability window (why seconds matter)
+## Problem Sizing & Survivability Window (Why Seconds Matter)
 
-**Goal:** quantify the incident scale and the medical urgency your drone addresses.
+**Goal**: Quantify the incident scale and the medical urgency your drone addresses.
 
-- Global cruise **MOB frequency and rescue rates** (baseline risk).
-- **Cold-water / immersion survival** drivers that make fast location critical.
+- Global cruise MOB frequency and rescue rates (baseline risk)
+- Cold-water / immersion survival drivers that make fast location critical
 
 How to support it
 

@@ -1,45 +1,49 @@
-# Cruise Overboard Watch(CROW) Drone System
+# CROW Systems Overview
 
-## 1) Purpose & Mission Profile
+## Purpose & Mission Profile
 
-**Mission:** Launch in seconds on MOB, perform a brief **IRD** autonomously, **pilot-controlled** search to **find**, **mark**, **monitor**, and **deliver buoyancy** while providing live geo-tagged video to bridge/rescue, acting as a visual/IR beacon to vector rescue craft.
+**Mission:** Launch in seconds on MOB, perform a brief Initial Rescue Diagnostic (IRD) autonomously, then transition to pilot-controlled search to find, mark, monitor, and deliver buoyancy while providing live geo-tagged video to bridge/rescue, acting as a visual/IR beacon to vector rescue craft.
 
 **Primary outcomes (first minutes):**
-(1) Auto-launch + IRD; (2) Manual pilot control; (3) Geo-tagged target tracking; (4) Beaconing (visible + IR); (5) Buoy/dye deployment on pilot command.
+1. Auto-launch + IRD
+2. Manual pilot control
+3. Geo-tagged target tracking
+4. Beaconing (visible + IR)
+5. Buoy/dye deployment on pilot command
 
 **Primary outcomes (within first minutes):**
 
-1. Aerial detection in night/day;
-2. Continuous geo-tagged tracking;
-3. On-site beaconing (visible + IR + optional audio);
-4. Drop a lightweight auto-inflating flotation/marker;
-5. Stream video/telemetry to the bridge and rescue boat helm.
+1. Aerial detection in night/day conditions
+2. Continuous geo-tagged tracking
+3. On-site beaconing (visible + IR + optional audio)
+4. Drop a lightweight auto-inflating flotation/marker
+5. Stream video/telemetry to the bridge and rescue boat helm
 
-## 2) System Overview (shipboard set)
+## System Overview (Shipboard Set)
 
-- **`CROW` Drone** (marine-ruggedized quad)
+- **CROW Drone** (marine-ruggedized quadcopter)
 - **MOB Dock** (auto-hangar/charger; instant launch)
 - **Bridge Interface Unit (BIU)** (MOB input, comms, records, pilot takeover handoff)
 - **Rescue Payloads** (inflatable ring, dye/smoke, strobes)
-- **Pilot Kit (on-person satchel)** (see §12)
+- **Pilot Kit (on-person satchel)** (see section 12)
 
-## 3) Key Performance Targets (MVP)
+## Key Performance Targets (MVP)
 
-- **Auto-launch latency:** ≤ 20 s from MOB alarm
-- **IRD duration (hard-limit):** 60–120 s (configurable, default 90 s)
-- **IRD radius cap:** ≤ 200 m from LKP (configurable envelope)
-- **Manual control availability:** pilot can take over **at any time** during IRD via priority command
-- **Time-to-first-sweep:** ≤ 60 s to begin grid at last-known position (LKP)
-- **Effective detection radius (night IR, sea state ≤ 4):** ≥ 400 m from LKP within first sortie
-- **Endurance:** ≥ 18 min hover / ≥ 14 min mixed (transit + loiter) on standard pack
-- **Wind envelope (operational):** up to Beaufort 6 (≈ 22–27 kn) with degraded performance; survivable gusts to 35 kn on launch/return
-- **Ingress protection:** Drone IP55 (operational rain/spray), Dock IP66/67
-- **Payload capacity:** ≥ 1.0 kg (MVP); growth path 1.8 kg
-- **Thermal detection:** 640×512 LWIR, 30–60 Hz; NETD ≤ 50 mK
-- **Visible camera:** 4K/30 main + 1080p/60 low-latency stream
-- **Strobe:** visible + IR, ≥ 200 cd, 1–4 Hz, IR 850 nm band
-- **Geo accuracy:** GNSS L1 standard; optional RTK base in dock (<0.5 m)
-- **Comms:** 2.4/5 GHz to ship mesh, AES-256; backup sub-GHz C2 link
+- **Auto-launch latency**: ≤ 20 s from MOB alarm
+- **IRD duration (hard-limit)**: 60–120 s (configurable, default 90 s)
+- **IRD radius cap**: ≤ 200 m from LKP (configurable envelope)
+- **Manual control availability**: pilot can take over at any time during IRD via priority command
+- **Time-to-first-sweep**: ≤ 60 s to begin grid at last-known position (LKP)
+- **Effective detection radius (night IR, sea state ≤ 4)**: ≥ 400 m from LKP within first sortie
+- **Endurance**: ≥ 18 min hover / ≥ 14 min mixed (transit + loiter) on standard pack
+- **Wind envelope (operational)**: up to Beaufort 6 (≈ 22–27 kn) with degraded performance; survivable gusts to 35 kn on launch/return
+- **Ingress protection**: Drone IP55 (operational rain/spray), Dock IP66/67
+- **Payload capacity**: ≥ 1.0 kg (MVP); growth path 1.8 kg
+- **Thermal detection**: 640×512 LWIR, 30–60 Hz; NETD ≤ 50 mK
+- **Visible camera**: 4K/30 main + 1080p/60 low-latency stream
+- **Strobe**: visible + IR, ≥ 200 cd, 1–4 Hz, IR 850 nm band
+- **Geo accuracy**: GNSS L1 standard; optional RTK base in dock (<0.5 m)
+- **Comms**: 2.4/5 GHz to ship mesh, AES-256; backup sub-GHz C2 link
 
 ## 4) Human-in-the-Loop Operations Doctrine
 

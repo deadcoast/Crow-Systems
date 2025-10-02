@@ -1,18 +1,18 @@
 
-# `CROW`: First-Response Drone System for Cruise Ships
+# CROW: First-Response Drone System for Cruise Ships
 
 ## The Problem
 
-- Every man-overboard (MOB) is a crisis. From a 20–50 story drop, survival depends on **seconds**.
-- Cold shock, unconscious impact injuries, and night conditions mean that unless a victim is located **immediately**, they are quickly lost in wake and drift.
-- Current response: MOB alarm → bridge turn → rescue boat prep → wide search. This process routinely takes **tens of minutes to hours** before re-acquisition — long past the golden survival window.
+- Every man-overboard (MOB) is a crisis. From a 20–50 story drop, survival depends on seconds.
+- Cold shock, unconscious impact injuries, and night conditions mean that unless a victim is located immediately, they are quickly lost in wake and drift.
+- Current response: MOB alarm → bridge turn → rescue boat prep → wide search. This process routinely takes tens of minutes to hours before re-acquisition — long past the golden survival window.
 
-**Key Factors:**
+### Key Factors
 
-- **Drop height = near fatal.** From 10–50 meters, survivability is already compromised (impact injuries, unconsciousness, internal trauma).
-- **Cold shock.** Even in temperate water, survival time can be measured in minutes without flotation.
-- **Visibility loss.** Within seconds, the person disappears from the bridge’s line of sight; currents and ship wake scatter them fast.
-- **Response lag.** Ship maneuvers + boat prep + search patterns = **hours** before recovery. Survival window = **minutes**.
+- **Drop height = near fatal**: From 10–50 meters, survivability is already compromised (impact injuries, unconsciousness, internal trauma).
+- **Cold shock**: Even in temperate water, survival time can be measured in minutes without flotation.
+- **Visibility loss**: Within seconds, the person disappears from the bridge's line of sight; currents and ship wake scatter them fast.
+- **Response lag**: Ship maneuvers + boat prep + search patterns = hours before recovery. Survival window = minutes.
 
 **Why This Matters:**
 
