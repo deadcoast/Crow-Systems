@@ -1,22 +1,20 @@
 {
   // Corvus Documentation Format Configuration
   // Professional document suite formatting for corvus syntax
-  
   // Core formatting rules
-  "MD013": false,  // Allow long lines for corvus syntax examples
+  "MD013": { "line_length": 120,  // Extended for corvus syntax examples
+    "code_blocks": false,
+    "tables": false 
+    },
   "MD024": false,  // Allow duplicate headings (common in documentation)
   "MD029": false,  // Allow any ordered list marker style
-  "MD033": false,  // Allow HTML tags (corvus uses HTML comments)
-  
+    // Corvus bracket system allowances
+    "MD033": {
+        "allowed_elements": ["!--", "-->", "<!--", "-->"]
+    },
   // Corvus-specific allowances
   "MD040": false,  // Allow fenced code blocks without language
   "MD041": false,  // Allow files without first line as heading
-  "MD013": {
-    "line_length": 120,  // Extended for corvus syntax examples
-    "code_blocks": false,
-    "tables": false
-  },
-  
   // Strict formatting for clarity
   "MD022": true,   // Require blank lines around headings
   "MD025": true,   // Require single top-level heading
@@ -25,20 +23,8 @@
   "MD031": true,   // Require blank lines around fenced code blocks
   "MD032": true,   // Require blank lines around lists
   "MD034": true,   // Require blank lines around HTML
-  
-  // Corvus bracket system allowances
-  "MD033": {
-    "allowed_elements": ["!--", "-->", "<!--", "-->"]
-  },
-  
   // Professional document standards
   "MD007": { "indent": 2 },  // Consistent indentation
   "MD012": false,  // Allow multiple consecutive blank lines for separation
-  "MD047": true,   // Require files to end with newline
-  
-  // Ignore specific patterns for corvus syntax
-  "MD013": {
-    "ignore_code_blocks": true,
-    "line_length": 120
-  }
+  "MD047": true  // Require files to end with newline
 }
