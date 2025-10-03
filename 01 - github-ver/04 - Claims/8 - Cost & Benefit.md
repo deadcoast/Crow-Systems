@@ -1,6 +1,6 @@
-# CLAIM — “Cost/benefit and PR risk reduction are compelling.”
+# CLAIM — “Cost/benefit and PR risk reduction are compelling.” #
 
-## A) Independent evidence (with links)
+## A) Independent evidence (with links) ##
 
 1. **Direct SAR expense is high (per hour), and multi-asset searches compound the bill**
 
@@ -30,7 +30,7 @@
 
 ---
 
-## B) Additional research points (expand with linked sources)
+## B) Additional research points (expand with linked sources) ##
 
 - **Expected-value model of a diverted/loitering cruise**: use fuel/hour (above) + **port/slot penalties** and **crew overtime** (industry reports) to quantify the hourly burn rate for a delay caused by MOB search. (Pair with schedule-disruption literature recognizing delay penalties.) 🔗 [Fuel/OPEX: Cruise Hive](https://www.cruisehive.com/how-much-does-it-cost-to-fuel-a-cruise-ship/101033) • 🔗 [E3S 2024 (delay penalty)](https://www.e3s-conferences.org/articles/e3sconf/pdf/2024/42/e3sconf_uct2024_04021.pdf)
 - **Media-exposure valuation**: derive PR-risk proxy by counting national stories per MOB and applying **advertising value equivalency (AVE)** or **share-of-voice shifts** (communications literature). 🔗 [Liu-Lastres 2019](https://scholarworks.indianapolis.iu.edu/bitstreams/11cad910-8761-4df7-81a4-214baf7cbe70/download)
@@ -39,7 +39,7 @@
 
 ---
 
-## C) Quantitative thresholds (business-plan ready)
+## C) Quantitative thresholds (business-plan ready) ##
 
 - **Marginal SAR cost avoided**: **$6,530/hr (helicopter)** × **H hours** + cutter/boat hours (per-asset multipliers) is reducible when **first visual** occurs early and survivor is **marked with strobe/dye** for ship recovery or short-range asset. 🔗 [NOAA/NWS](https://www.weather.gov/mlb/mayday_cost)
 - **Delay burn rate (fuel only)**: **$3.3k–$8.3k per hour** (fuel), plus **schedule penalties** and **compensation**; many MOB searches last **multiple hours** even when suspended without recovery. 🔗 [Cruise Hive](https://www.cruisehive.com/how-much-does-it-cost-to-fuel-a-cruise-ship/101033) • 🔗 [AP suspension example](https://apnews.com/article/b1fa49fce53f0d0ad3f51bd1ae2416dd)
@@ -47,7 +47,7 @@
 
 ---
 
-## D) Binder-ready statements (paste-in)
+## D) Binder-ready statements (paste-in) ##
 
 - “A single multi-asset MOB search can cost **five to six figures** in **USCG SAR hours** alone; early UAV visual/marking enables **ship-effected recovery** or a **shorter, localized search**, reducing **helicopter and cutter hours** materially.” ([National Weather Service][1])
 - “Cruise delay costs accumulate at **$3–8k/hour in fuel** before port/slot penalties, overtime, or compensation; cutting **loiter and search time** has immediate OPEX benefit.” ([Cruise Hive][2])
@@ -56,7 +56,7 @@
 
 ---
 
-## E) Evidence table
+## E) Evidence table ##
 
 | Cost/Risk Driver | Evidence            | Key datum                                           | Business translation                    |
 | ---------------- | ------------------- | --------------------------------------------------- | --------------------------------------- |
@@ -68,13 +68,13 @@
 
 ---
 
-## F) Executive one-liner
+## F) Executive one-liner ##
 
 “Every hour of a MOB search burns **thousands in fuel** and **helicopter/cutter costs**, while each high-profile loss drives **reputation damage** and revenue risk; MOB-1’s **fast, probability-weighted detection** and **buoy/dye/strobe marking** compress SAR time, **reduce OPEX**, and **lower PR exposure**—a cost/benefit that pays for itself across even a single avoided prolonged search.”
 
 ---
 
-## Payload BOM — **Model Inputs for Cost/Benefit** (place this page before Sources)
+## Payload BOM — **Model Inputs for Cost/Benefit** (place this page before Sources) ##
 
 | Input                              | Source/Link                                                        |                   Baseline/Range | How it’s used in model                     |
 | ---------------------------------- | ------------------------------------------------------------------ | -------------------------------: | ------------------------------------------ |
@@ -107,7 +107,7 @@
 
 ---
 
-## Sources (live links)
+## Sources (live links) ##
 
 - **USCG SAR theory (for POS modeling in ROI)** — *Theory of Search – A Simplified Explanation* (USCG). [https://navcen.uscg.gov/sites/default/files/pdf/Theory_of_Search.pdf](https://navcen.uscg.gov/sites/default/files/pdf/Theory_of_Search.pdf) ([IU Indianapolis ScholarWorks][3])
 - **USCG asset cost example** — HH-60 **$6,530/hr** (NOAA/NWS). [https://www.weather.gov/mlb/mayday_cost](https://www.weather.gov/mlb/mayday_cost) ([National Weather Service][1])
@@ -122,12 +122,12 @@
 
 ---
 
-[1]: https://www.weather.gov/mlb/mayday_cost?utm_source=chatgpt.com "cost for mayday hoax"
-[2]: https://www.cruisehive.com/how-much-does-it-cost-to-fuel-a-cruise-ship/101033?utm_source=chatgpt.com "How Much Does it Cost to Fuel a Cruise Ship?"
-[3]: https://scholarworks.indianapolis.iu.edu/bitstreams/11cad910-8761-4df7-81a4-214baf7cbe70/download?utm_source=chatgpt.com "Managing Cruise Lines' Reputation during Crisis Times"
-[4]: https://soundingsonline.com/features/rescues-arent-cheap/?utm_source=chatgpt.com "Rescues aren't cheap"
-[5]: https://www.e3s-conferences.org/articles/e3sconf/pdf/2024/42/e3sconf_uct2024_04021.pdf?utm_source=chatgpt.com "Study on cruise speed optimization and refueling strategy ..."
-[6]: https://apnews.com/article/b1fa49fce53f0d0ad3f51bd1ae2416dd?utm_source=chatgpt.com "Search suspended for man believed to have gone overboard from cruise ship off California's coast"
-[7]: https://apnews.com/article/3333b2eced828426f1ea8df584587c58?utm_source=chatgpt.com "Disney cruise ship rescue team saves girl and father after overboard fall"
-[8]: https://gcaptain.com/cruise-industry-faces-renewed-calls-for-man-overboard-tech-after-father-daughter-rescue/?utm_source=chatgpt.com "Cruise Industry Faces Renewed Calls for Man Overboard ..."
-[9]: https://people.com/royal-caribbean-crew-member-dies-after-stabbing-fellow-worker-jumping-off-ship-11779676?utm_source=chatgpt.com "Royal Caribbean Crew Member Stabbed Fellow Worker Before Jumping Off Ship to His Death"
+[1]: https://www.weather.gov/mlb/mayday_cost "cost for mayday hoax"
+[2]: https://www.cruisehive.com/how-much-does-it-cost-to-fuel-a-cruise-ship/101033 "How Much Does it Cost to Fuel a Cruise Ship?"
+[3]: https://scholarworks.indianapolis.iu.edu/bitstreams/11cad910-8761-4df7-81a4-214baf7cbe70/download "Managing Cruise Lines' Reputation during Crisis Times"
+[4]: https://soundingsonline.com/features/rescues-arent-cheap/ "Rescues aren't cheap"
+[5]: https://www.e3s-conferences.org/articles/e3sconf/pdf/2024/42/e3sconf_uct2024_04021.pdf "Study on cruise speed optimization and refueling strategy ..."
+[6]: https://apnews.com/article/b1fa49fce53f0d0ad3f51bd1ae2416dd "Search suspended for man believed to have gone overboard from cruise ship off California's coast"
+[7]: https://apnews.com/article/3333b2eced828426f1ea8df584587c58 "Disney cruise ship rescue team saves girl and father after overboard fall"
+[8]: https://gcaptain.com/cruise-industry-faces-renewed-calls-for-man-overboard-tech-after-father-daughter-rescue/ "Cruise Industry Faces Renewed Calls for Man Overboard ..."
+[9]: https://people.com/royal-caribbean-crew-member-dies-after-stabbing-fellow-worker-jumping-off-ship-11779676 "Royal Caribbean Crew Member Stabbed Fellow Worker Before Jumping Off Ship to His Death"

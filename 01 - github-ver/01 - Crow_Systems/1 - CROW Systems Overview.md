@@ -1,10 +1,11 @@
-# CROW Systems Overview
+# CROW Systems Overview #
 
-## Purpose & Mission Profile
+## Purpose & Mission Profile ##
 
 **Mission:** Launch in seconds on MOB, perform a brief Initial Rescue Diagnostic (IRD) autonomously, then transition to pilot-controlled search to find, mark, monitor, and deliver buoyancy while providing live geo-tagged video to bridge/rescue, acting as a visual/IR beacon to vector rescue craft.
 
 **Primary outcomes (first minutes):**
+
 1. Auto-launch + IRD
 2. Manual pilot control
 3. Geo-tagged target tracking
@@ -19,7 +20,7 @@
 4. Drop a lightweight auto-inflating flotation/marker
 5. Stream video/telemetry to the bridge and rescue boat helm
 
-## System Overview (Shipboard Set)
+## System Overview (Shipboard Set) ##
 
 - **CROW Drone** (marine-ruggedized quadcopter)
 - **MOB Dock** (auto-hangar/charger; instant launch)
@@ -27,7 +28,7 @@
 - **Rescue Payloads** (inflatable ring, dye/smoke, strobes)
 - **Pilot Kit (on-person satchel)** (see section 12)
 
-## Key Performance Targets (MVP)
+## Key Performance Targets (MVP) ##
 
 - **Auto-launch latency**: ≤ 20 s from MOB alarm
 - **IRD duration (hard-limit)**: 60–120 s (configurable, default 90 s)
@@ -45,7 +46,7 @@
 - **Geo accuracy**: GNSS L1 standard; optional RTK base in dock (<0.5 m)
 - **Comms**: 2.4/5 GHz to ship mesh, AES-256; backup sub-GHz C2 link
 
-## 4) Human-in-the-Loop Operations Doctrine
+## 4) Human-in-the-Loop Operations Doctrine ##
 
 **Trigger → Auto-Launch → Human Pilot Takes Over.**
 
@@ -71,14 +72,14 @@
 
 ---
 
-## 5) Power System
+## 5) Power System ##
 
 - **Battery:** 6S Li-ion (21700 cells) 10–12 Ah pack; cold-tolerant; smart BMS
 - **Hot-swap:** Dock maintains 2–3 charged packs; robotic pusher/latch or manual slide-in for MVP; target 20-second swap cycle
 - **Heaters:** pack pre-warm to ≥ 10 °C via dock; flight pack thermal wrap
 - **Charger:** 400–600 W CC/CV in dock; pack-ID & cycle logging
 
-## 6) Sensors & Payload (MVP)
+## 6) Sensors & Payload (MVP) ##
 
 **Gimbal:** 2-axis stabilized, IP54 seal
 
@@ -95,14 +96,14 @@
 - **Beacon:** high-intensity visible strobe + 850 nm IR strobe; auto-pattern on “Target Locked” state
 - **Audio (optional):** 85–95 dB buzzer/voice prompt for conscious casualty orientation
 
-## 7) Avionics & Compute
+## 7) Avionics & Compute ##
 
 - **Flight controller:** Redundant IMU; open architecture (PX4-class) or enterprise controller with marine tuning; dual GPS if possible
 - **Edge compute:** ARM SoC (8-core) + NPU (≥ 4 TOPS) for onboard detection/tracking; NVMe 256–512 GB for video & event logs
 - **Interfaces:** CSI for cameras, SPI/I²C for sensors, UART for payload release, Ethernet-over-USB to Dock diag when seated
 - **Failsafe:** RTH to dock, hover-and-descend if GNSS lost, geofence off ship superstructure
 
-## 8) Comms & Navigation
+## 8) Comms & Navigation ##
 
 - **Pilot Priority Link:** the hand controller establishes a **privileged control session** on connection; receiving this signal **preempts autonomy** and switches to Manual/Assisted mode.
 - **Hot Handoff:** BIU UI displays “Pilot in Command” state; bridge can still view video/telemetry but cannot drive the aircraft while pilot is active (to avoid command contention).
@@ -111,7 +112,7 @@
 - **Networking:** Bridge Interface Unit (BIU) acts as ground station server; streams to ECDIS/helm tablet via RTSP/WebRTC
 - **GNSS:** GPS/GLONASS/Galileo; optional RTK via dock base for precise geotag; magnetometer offset calibration for ship superstructure
 
-## 9) Software Modes
+## 9) Software Modes ##
 
 1. **Auto-Launch (MOB Triggered):** Dock opens; drone arms; climbs to safe height and proceeds to LKP.
 2. **IRD (Initial Rescue Diagnostic):** **Strictly bounded** autonomous micro-grid (time+radius caps). **No buoy drop** in IRD (observe-only) unless **pilot authorizes**.
@@ -126,7 +127,7 @@
 - Buoy release requires **positive pilot command** (two-stage confirm).
 - Smoke locked out above Beaufort 4; dye pack pilot-approval.
 
-### **V2.0** -> Autonomous Flight
+### **V2.0** -> Autonomous Flight Fallback ###
 
 - **Auto-Launch on MOB:** Dock lid pops, props arm, ascent to safe height (e.g., 25–35 m AGL), immediate transit to LKP
 - **Grid Search:** expanding square or sector sweep; adaptive to wind/current; probability-weighted (future: Monte Carlo PDF from BIU)
@@ -135,7 +136,7 @@
 - **Hand-off:** maintain hover beacon until rescue craft on-scene; follow-assist if drift exceeds X meters
 - **Precision Dock Return:** approach corridor, precision land using visual markers + Lidar; auto-wipe & charge
 
-## 10) Dock (MOB Dock) — Mechanical & Electrical
+## 10) Dock (MOB Dock) — Mechanical & Electrical ##
 
 - **Enclosure:** IP66/67, marine-coated aluminum; salt-fog tested (ASTM B117)
 - **Lid:** motorized lift; water-shedding lip + gasket; de-icing heater pads
@@ -146,7 +147,7 @@
 - **Battery bay:** 2–3 slot smart charger; pack ID, cycle count; safety interlocks
 - **Self-care:** wiper/nozzle to clear salt film on gimbal window; rinse cycle (manual maintenance mode)
 
-## 11) Bridge Interface Unit (BIU)
+## 11) Bridge Interface Unit (BIU) ##
 
 - **Workflow:** MOB alarm → **Auto-Launch (T-0)** → IRD countdown visible (e.g., “IRD: 0:90…0:00”) → “Awaiting Pilot” banner until takeover.
 - **Controls:** Bridge can **abort IRD**, command **Return**, or **Pause & Hold** (hover). **Buoy drop is pilot-only** by policy.
@@ -156,7 +157,7 @@
 - **Software:** mission control UI (Web), recording (video/GPS), Alert API hooks, user roles; health telemetry of Dock/Drone
 - **Cyber:** signed firmware; audit logs; TLS cert pinning
 
-## 12) Safety & Training
+## 12) Safety & Training ##
 
 **Pilot:**
 
@@ -173,8 +174,8 @@
 
 - **Doctrine:** Auto-launch buys **seconds**; **humans rescue**. The system **assists**, it does **not** replace pilot judgment.
 - **Training:**
-  - **Monthly drill:** Auto-launch + IRD + pilot takeover within 60 s; no passenger areas overflight.
-  - **Quarterly drill:** Full night ops; buoy drop on dummy; beacon hover + handoff to rescue boat.
+    - **Monthly drill:** Auto-launch + IRD + pilot takeover within 60 s; no passenger areas overflight.
+    - **Quarterly drill:** Full night ops; buoy drop on dummy; beacon hover + handoff to rescue boat.
 - **Checklists:** IRD limits, smoke/dye use gates, buoy drop confirmation, lost-link actions.
 - **Passenger comms:** PA option (“drone in operation, remain clear of designated deck area”).
 - **One-button flow:** MOB alarm → BIU pops dialog: “LAUNCH?” (auto after 5 s unless canceled)
@@ -182,14 +183,14 @@
 - **Deck crew safety:** defined launch corridor away from passengers; PA announcement option
 - **Training:** 30-min CBT; monthly drill (auto-launch + hover); quarterly full payload drill
 
-## 13) Environmental & Compliance (design intent)
+## 13) Environmental & Compliance (design intent) ##
 
 - **EMC/EMI:** IEC 60945 guidance; CISPR 22/24 shipboard emissions/immunity
 - **Ingress/Corrosion:** IP ratings above; ASTM B117 salt-fog; ISO 9227
 - **Batteries/Transport:** UN 38.3; IEC 62133; maritime MSDS on packs and CO₂ canisters
 - **Maritime class engagement:** DNV/ABS/LR “auxiliary lifesaving equipment” path; document FMEAs, test plans, and maintenance schedules
 
-## 14) Test Regimen (MVP → Pilot)
+## 14) Test Regimen (MVP → Pilot) ##
 
 - **Human-in-the-loop drills:** measure **time-to-pilot-control** (target ≤ 60 s from MOB alarm), **command preempt latency** (< 300 ms), IRD adherence (no overrun).
 - **Trials:** same SAR metrics as before, plus pilot workload assessment and visibility with goggles vs. bridge repeater.
@@ -199,7 +200,7 @@
 - **SAR trials:** dummy in water (day/night, sea state 2–4); metrics: time-to-detect, false positives/hour, beacon hold accuracy, buoy drop CEP
 - **Reliability target:** MTBF ≥ 200 flight hours in marine environment across 6 months
 
-## 15) Rough BOM Targets (MVP, per ship set)
+## 15) Rough BOM Targets (MVP, per ship set) ##
 
 - **Drone airframe + sensors + compute:** $6–10k
 - **Thermal core (640):** $2.5–5k (depends on supplier)
@@ -209,7 +210,7 @@
 - **Total per ship (MVP):** ~$25–40k hardware; support & training separate
   *(Intentionally aggressive; goal is “no-brainer” CAPEX vs. safety/PR upside.)*
 
-## 16) Known Challenges & Mitigations
+## 16) Known Challenges & Mitigations ##
 
 - **Command contention (bridge vs pilot):** Adopt **Pilot-in-Command** lock with explicit “Request Control” handshake on BIU.
 - **Over-automation risk:** IRD hard caps + hardware **Auto-Launch Enable** switch; policy that **all critical actions** (buoy/smoke/dye) are **pilot-commanded**.
@@ -221,13 +222,13 @@
 - **Passenger interactions/curiosity** → Locking dock, crew-only area, PA procedure.
 - **Regulatory novelty** → Early engagement with class societies; treat as auxiliary—not replacement—lifesaving; clear SOPs & drills; insurer briefings.
 
-## 17) Growth Path / Future Options
+## 17) Growth Path / Future Options ##
 
 - **Assisted “pilot tools”:**
 
-  - **Probability-map overlay** (from drift model) on pilot HUD.
-  - **Aim-assist hover** (maintains offset over target in gusts).
-  - **Auto-camera framing** (keeps detection in frame; pilot flies, camera follows).
+    - **Probability-map overlay** (from drift model) on pilot HUD.
+    - **Aim-assist hover** (maintains offset over target in gusts).
+    - **Auto-camera framing** (keeps detection in frame; pilot flies, camera follows).
 
 - **Dual-drone concept:** One auto-launch IRD unit; second queued and **pilot-launched** on demand for relief/beacon handoff.
 - **mmWave micro-radar pod:** Boost detection in spray/foam; fuse into detector stack.
@@ -236,7 +237,7 @@
 - **AIS-SART tie-in:** Drop AIS-SART marker for universal receiver visibility on nearby craft.
 - **Thermal zoom/lens switcher:** Dynamic FOV based on altitude for best detection swath vs. resolution.
 
-## 18) Deliverables (to instruct integrator)
+## 18) Deliverables (to instruct integrator) ##
 
 - **3D CAD pack:** drone frame, dock, mounts, harness drawings; IP ratings callouts
 - **Electrical schematics:** power, payload bus, release circuit, strobe driver, BIU I/O
@@ -245,3 +246,5 @@
 - **Verification plan:** pass/fail criteria per test regimen; data collection templates
 
 ---
+
+CROW Drone Systems - Advanced Maritime Search and Rescue Technology

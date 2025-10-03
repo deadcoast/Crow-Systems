@@ -1,6 +1,6 @@
-# Evidence Pack — UAV First-Response for Man-Overboard (MOB) Detection & Marking
+# Evidence Pack — UAV First-Response for Man-Overboard (MOB) Detection & Marking #
 
-## Executive summary
+## Executive summary ##
 
 - Commercial drones carrying thermal + RGB sensors can **materially cut time-to-first-visual** of a person in the water compared with ship-only search. A conservative analytic model (using DJI H20T thermal DFOV 40.6°, 640×512, and a 15 m/s search speed) shows one UAV can sweep a 600 m radius sector in ~22 min at 120 m AGL; two UAVs halve that. Calculations and assumptions are detailed below with camera and airframe specs cited. ([DJI Download Center][1])
 - **Thermal detection performance** for waterborne persons has peer-reviewed support: a 2024 study achieved **85.49% accuracy at 23.51 FPS** for nighttime detection of people in water using thermal imagery and deep learning, demonstrating real-time feasibility on embedded platforms.
@@ -9,7 +9,7 @@
 
 ---
 
-## 1) Baseline: incidence, physiology, and search planning
+## 1) Baseline: incidence, physiology, and search planning ##
 
 **Incidence on cruise vessels.** The CLIA-commissioned independent review (G.P. Wild) documents **212 overboards and 48 rescues** over 2009–2019. This establishes the problem scale and the value of minutes saved in initial location.
 
@@ -19,7 +19,7 @@
 
 ---
 
-## 2) What ships already have (detection & rescue context)
+## 2) What ships already have (detection & rescue context) ##
 
 **Onboard overboard-detection standardization.** **ISO 21195:2020** defines **performance requirements for *non-wearable* person-overboard detection systems** (e.g., thermal/radar gates). Solutions such as **MARSS MOBtronic** are built to this standard.
 
@@ -27,7 +27,7 @@
 
 ---
 
-## 3) Evidence that drones help find and stabilize a person in water
+## 3) Evidence that drones help find and stabilize a person in water ##
 
 - **Armed-forces trials.** Royal Navy (NavyX) conducted **MOB trials** where drones *locate*, **drop life-saving equipment**, and **hover to mark** the survivor until retrieval.
 - **Public-safety deployments.** Police and lifeguard programs have **dropped PFDs/life rings** to swimmers, demonstrating rapid delivery of buoyancy while a boat/helicopter closes. ([UAV Coach][5])
@@ -35,7 +35,7 @@
 
 ---
 
-## 4) Sensors suited to maritime MOB detection
+## 4) Sensors suited to maritime MOB detection ##
 
 **Thermal core options and FOV.** Maritime UAV payloads commonly use **640×512 VOx microbolometer** sensors. The DJI **H20T** thermal lists **DFOV 40.6°**, 30 Hz, ≤50 mK NETD. Teledyne FLIR **Boson 640** modules offer lens sets including **24° HFOV** for narrower, longer-range search. ([DJI][7])
 
@@ -45,7 +45,7 @@
 
 ---
 
-## 5) Quantitative model — time-to-first-visual & coverage
+## 5) Quantitative model — time-to-first-visual & coverage ##
 
 **Assumptions (cited hardware figures; conservative flight parameters):**
 
@@ -70,7 +70,7 @@ At **H = 200 m**, W ≈118 m → Wₑ ≈94.7 m; **T ≈ 13.3 min** for one UAV,
 
 ---
 
-## 6) Marking & tracking of the survivor (drop payloads + e-beacons)
+## 6) Marking & tracking of the survivor (drop payloads + e-beacons) ##
 
 **Flotation & visual marking.** Trials and deployments show drones delivering **inflatable pods or life jackets**, buying buoyancy and visibility until pickup. A hovering UAV also serves as a **high-contrast visual/IR “pointer”** for boats/helicopters. ([TIME][6])
 
@@ -78,7 +78,7 @@ At **H = 200 m**, W ≈118 m → Wₑ ≈94.7 m; **T ≈ 13.3 min** for one UAV,
 
 ---
 
-## 7) Operational constraints to engineer around (non-financial)
+## 7) Operational constraints to engineer around (non-financial) ##
 
 - **Wind/spray limitations.** Typical enterprise multirotors tolerate **≈15 m/s wind** and are **IP45**—operations degrade in gale-force winds, heavy rain or salt-spray ingestion. Maritime hardening (coatings, conformal-coated PCBs, hydrophobic optics) is advisable. ([RS Components][10])
 - **Sea-surface false alarms.** Breaking waves, birds and glare are documented **nuisance sources** in MOB detection—affects automated triggers and human interpretation; fused thermal+RGB and temporal filters mitigate.
@@ -86,7 +86,7 @@ At **H = 200 m**, W ≈118 m → Wₑ ≈94.7 m; **T ≈ 13.3 min** for one UAV,
 
 ---
 
-## 8) Replicable calculation sheet (traceable to citations)
+## 8) Replicable calculation sheet (traceable to citations) ##
 
 **Given:** H20T DFOV 40.6° (spec) → HFOV ≈ 33.0° (derived); M300 class speed ≤23 m/s (spec); search v = 15 m/s; overlap = 20%; r = 600 m. ([DJI Download Center][9])
 **Compute:**
@@ -100,7 +100,7 @@ At **H = 200 m**, W ≈118 m → Wₑ ≈94.7 m; **T ≈ 13.3 min** for one UAV,
 
 ---
 
-## 9) Key sources (selected)
+## 9) Key sources (selected) ##
 
 - **Nighttime water-person detection** with thermal + deep learning, **85.49% accuracy @ 23.51 FPS** (MDPI, 2024).
 - **Royal Navy** MOB drone trials: locate, **drop kit**, hover.
@@ -114,20 +114,20 @@ At **H = 200 m**, W ≈118 m → Wₑ ≈94.7 m; **T ≈ 13.3 min** for one UAV,
 
 ---
 
-### Conclusion
+### Conclusion ###
 
 Peer-reviewed detection performance, military/police trials, established MOB-detection standards, and a transparent coverage model jointly support a **drone-first locate-and-mark** approach: autonomous **auto-launch to first grid**, then **human-piloted** search, electronic/visual **marking**, and **handover to required rescue boats**. This data directly targets the high-risk first minutes after entry into cold water. ([eCFR][4])
 
-[1]: https://dl.djicdn.com/downloads/matrice-300/20200529/M300_RTK_User_Manual_EN_0604.pdf?utm_source=chatgpt.com "MATRICE 300 RTK"
-[2]: https://www.dco.uscg.mil/Portals/9/DCO%20Documents/5p/CG-5PC/CG-CVC/CVC3/notice/flyers/Cold_Water_Survival_Hypothermia.pdf?utm_source=chatgpt.com "Cold Water Survival & Hypothermia"
-[3]: https://www.dco.uscg.mil/Portals/9/CG-5R/SARfactsInfo/SAROPSInforSheet.pdf?utm_source=chatgpt.com "Search and Rescue Optimal Planning System (SAROPS)"
-[4]: https://www.ecfr.gov/current/title-46/chapter-I/subchapter-W/part-199/subpart-C?utm_source=chatgpt.com "Subpart C—Additional Requirements for Passenger Vessels"
-[5]: https://uavcoach.com/drone-lifeguards/?utm_source=chatgpt.com "San Mateo Sheriff's Office Tests the Use of Drones as ..."
-[6]: https://time.com/5109269/surf-drone-rescue-worlds-first-australia/?utm_source=chatgpt.com "Watch the World's First Ever Drone Surf Rescue"
-[7]: https://enterprise.dji.com/zenmuse-h20-series/specs?utm_source=chatgpt.com "Specs - Zenmuse H20 Series"
-[8]: https://www.ascendentgroup.com/uploads/files/Johnson_Criteria_Thermal_DRI_Performance_and_Range_Explained.pdf?utm_source=chatgpt.com "White Paper"
-[9]: https://dl.djicdn.com/downloads/Zenmuse_H20_Series/Zenmuse_H20_Series_User_Manual-EN.pdf?utm_source=chatgpt.com "ZENMUSE H20 SERIES"
-[10]: https://docs.rs-online.com/c8cb/A700000008264601.pdf?utm_source=chatgpt.com "Matrice 300 RTK - RS Online"
-[11]: https://navcen.uscg.gov/sites/default/files/pdf/Theory_of_Search.pdf?utm_source=chatgpt.com "The Theory of Search - A Simplified Explanation - navcen"
-[12]: https://hgh-infrared.com/detection-recognition-identification-ranges-faq/?utm_source=chatgpt.com "Detection Recognition Identification I HGH Infrared Systems"
-[13]: https://cdn.standards.iteh.ai/samples/16694/7bf752a5752548be8abe3a3b90f71445/IEC-61097-14-2010.pdf?utm_source=chatgpt.com "IEC 61097-14"
+[1]: https://dl.djicdn.com/downloads/matrice-300/20200529/M300_RTK_User_Manual_EN_0604.pdf "MATRICE 300 RTK"
+[2]: https://www.dco.uscg.mil/Portals/9/DCO%20Documents/5p/CG-5PC/CG-CVC/CVC3/notice/flyers/Cold_Water_Survival_Hypothermia.pdf "Cold Water Survival & Hypothermia"
+[3]: https://www.uscg.mil/Our-Organization/Assistant-Commandant-for-Acquisitions-CG-9/International-Acquisition/SAROPS/ "Search and Rescue Optimal Planning System (SAROPS)"
+[4]: https://www.ecfr.gov/current/title-46/chapter-I/subchapter-W/part-199/subpart-C "Subpart C—Additional Requirements for Passenger Vessels"
+[5]: https://uavcoach.com/drone-lifeguards/ "San Mateo Sheriff's Office Tests the Use of Drones as ..."
+[6]: https://time.com/5109269/surf-drone-rescue-worlds-first-australia/ "Watch the World's First Ever Drone Surf Rescue"
+[7]: https://enterprise.dji.com/zenmuse-h20-series/specs "Specs - Zenmuse H20 Series"
+[8]: https://www.ascendentgroup.com/uploads/files/Johnson_Criteria_Thermal_DRI_Performance_and_Range_Explained.pdf "White Paper"
+[9]: https://dl.djicdn.com/downloads/Zenmuse_H20_Series/Zenmuse_H20_Series_User_Manual-EN.pdf "ZENMUSE H20 SERIES"
+[10]: https://docs.rs-online.com/c8cb/A700000008264601.pdf "Matrice 300 RTK - RS Online"
+[11]: https://navcen.uscg.gov/sites/default/files/pdf/Theory_of_Search.pdf "The Theory of Search - A Simplified Explanation - navcen"
+[12]: https://hgh-infrared.com/detection-recognition-identification-ranges-faq/ "Detection Recognition Identification I HGH Infrared Systems"
+[13]: https://cdn.standards.iteh.ai/samples/16694/7bf752a5752548be8abe3a3b90f71445/IEC-61097-14-2010.pdf "IEC 61097-14"

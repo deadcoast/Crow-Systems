@@ -1,12 +1,12 @@
-# Bill of Materials for CROW Systems
+# Bill of Materials for CROW Systems #
 
-## Overview
+## Overview ##
 
 This document contains the bill of materials for the CROW Systems.
 
-## Claims Bill of Materials
+## Claims Bill of Materials ##
 
-### BOM - Deployment Module (Claim 5)
+### BOM - Deployment Module (Claim 5) ###
 
 | Component                 | Reference Product / Standard                                                           | Mass / Dimensions            | Key Specs                                                                 | Relevance                                                          |
 | ------------------------- | -------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------ |
@@ -23,7 +23,7 @@ This document contains the bill of materials for the CROW Systems.
 
 ---
 
-### BOM - Payload (Claim 6)
+### BOM - Payload (Claim 6) ###
 
 (Note: BOM relevant here is software/data payload, not physical. To maintain consistency, here is a one-page listing of the “information payload” required for probability-weighted search.)
 
@@ -40,7 +40,7 @@ This document contains the bill of materials for the CROW Systems.
 
 ---
 
-### BOM - Evidence & Audit Module (Claim 7)
+### BOM - Evidence & Audit Module (Claim 7) ###
 
 | Component                         | Reference / Standard                                               | Spec / Target                                                       | Purpose                                                                           |
 | --------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -58,13 +58,13 @@ This document contains the bill of materials for the CROW Systems.
 - Time source: GNSS-disciplined clock or PTP grandmaster (rack/bridge-wing).
 - Network: VLAN-isolated timing plane + QoS for PTP/NTP.
 
-## References
+## References ##
 
 [1]: https://www.imo.org/en/OurWork/Safety/Pages/VoyageDataRecorders.aspx "IMO MSC.333(90) - Voyage Data Recorders"
 [6]: https://www.npcc.police.uk/Publication/National%20Policing%20Guidelines/ACPO%20Guidelines%20on%20Digital%20Evidence.pdf "NPCC Digital Evidence Guidelines"
 [7]: https://csrc.nist.gov/publications/detail/fips/180/4/final "NIST FIPS 180-4 - Secure Hash Standard"
 [8]: https://datatracker.ietf.org/doc/html/rfc5905 "RFC 5905 - Network Time Protocol Version 4"
-[10]: https://www.iteh.ai/catalog/standard/iec/60945/ed-4-0/iec-60945-ed-4-0-2021-08 "IEC 60945 - Maritime navigation and radiocommunication equipment and systems"
+[10]: https://www.iec.ch/ip-ratings "IEC 60945 - Maritime navigation and radiocommunication equipment and systems"
 [11]: https://www.eagle.org/en/rules-and-resources/rules-and-guides.html "Eagle Classification Society Rules"
 
 ---

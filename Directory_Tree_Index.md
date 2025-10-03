@@ -2,6 +2,35 @@
 
 This document contains the directory tree index for the Crow-Drone-Systems project.
 
+- [Directory Tree Index](#directory-tree-index)
+    - [Contents](#contents)
+    - [Project Structure](#project-structure)
+        - [Root Files](#root-files)
+        - [01 - github-ver](#01---github-ver)
+            - [00 - Maps of Content](#00---maps-of-content)
+            - [01 - Crow\_Systems](#01---crow_systems)
+            - [02 - Research](#02---research)
+            - [03 - Evidence Block](#03---evidence-block)
+            - [04 - Claims](#04---claims)
+            - [05 - Post Prototype](#05---post-prototype)
+            - [99 - META](#99---meta)
+                - [00 - Templates](#00---templates)
+                - [Preloaded Classes](#preloaded-classes)
+        - [02 - obsidian-ver](#02---obsidian-ver)
+            - [00 - Maps of Content](#00---maps-of-content-1)
+            - [01 - Crow\_Systems](#01---crow_systems-1)
+            - [02 - Research](#02---research-1)
+            - [03 - Evidence Block](#03---evidence-block-1)
+            - [04 - Claims](#04---claims-1)
+            - [05 - Post Prototype](#05---post-prototype-1)
+            - [99 - META](#99---meta-1)
+                - [00 - Templates](#00---templates-1)
+                - [Preloaded Classes](#preloaded-classes-1)
+
+## Contents ##
+
+This document contains the directory tree index for the Crow-Drone-Systems project.
+
 ## Project Structure ##
 
 ### Root Files ###
@@ -67,9 +96,9 @@ This document contains the directory tree index for the Crow-Drone-Systems proje
 - [4 - CROW Real World Use Case.md](01%20-%20github-ver/04%20-%20Claims/4%20-%20CROW%20Real%20World%20Use%20Case.md)
 - [5 - Tool Deployment.md](01%20-%20github-ver/04%20-%20Claims/5%20-%20Tool%20Deployment.md)
 - [6 - Probability over Uniform Patterns.md](01%20-%20github-ver/04%20-%20Claims/6%20-%20Probability%20over%20Uniform%20Patterns.md)
-- [7 - A) Data Capturing & Audit.md](01%20-%20github-ver/04%20-%20Claims/7%20-%20A)%20Data%20Capturing%2004%20-%20Claims/7%20-%20A)%20Data%20Capturing%20&%20Audit.md)%20Audit.md
+- [7 - A) Data Capturing & Audit.md](01%20-%20github-ver/04%20-%20Claims/7%20-%20A)%20Data%20Capturing%20&%20Audit.md)
 - [7 - B) Supporting Example.md](01%20-%20github-ver/04%20-%20Claims/7%20-%20B)%20Supporting%20Example.md)
-- [8 - Cost & Benefit](01%20-%20github-ver/04%20-%20Claims/8%20-%20Cost%20&%20Benefit)
+- [8 - Cost & Benefit.md](01%20-%20github-ver/04%20-%20Claims/8%20-%20Cost%20&%20Benefit.md)
 
 #### 05 - Post Prototype ####
 
@@ -102,7 +131,7 @@ This document contains the directory tree index for the Crow-Drone-Systems proje
 
 - [(index) - 02 - obsidian-ver.md](02%20-%20obsidian-ver/(index)%20-%2002%20-%20obsidian-ver.md)
 
-## obs.ver - 00 - Maps of Content ##
+#### 00 - Maps of Content ####
 
 - [(index) - 00 - Maps of Content.md](02%20-%20obsidian-ver/00%20-%20Maps%20of%20Content/(index)%20-%2000%20-%20Maps%20of%20Content.md)
 - [(index) - 00 - Templates.md](02%20-%20obsidian-ver/00%20-%20Maps%20of%20Content/(index)%20-%2000%20-%20Templates.md)
@@ -114,7 +143,7 @@ This document contains the directory tree index for the Crow-Drone-Systems proje
 - [(index) - 99 - META.md](02%20-%20obsidian-ver/00%20-%20Maps%20of%20Content/(index)%20-%2099%20-%20META.md)
 - [(index) - Preloaded Classes.md](02%20-%20obsidian-ver/00%20-%20Maps%20of%20Content/(index)%20-%20Preloaded%20Classes.md)
 
-## obs.ver - 01 - Crow_Systems ##
+#### 01 - Crow_Systems ####
 
 - [(index) - 01 - Crow_Systems.md](02%20-%20obsidian-ver/01%20-%20Crow_Systems/(index)%20-%2001%20-%20Crow_Systems.md)
 - [0 - TODO.md](02%20-%20obsidian-ver/01%20-%20Crow_Systems/0%20-%20TODO.md)
@@ -126,13 +155,13 @@ This document contains the directory tree index for the Crow-Drone-Systems proje
 - [6 - Bill of Materials.md](02%20-%20obsidian-ver/01%20-%20Crow_Systems/6%20-%20Bill%20of%20Materials.md)
 - [7 - Statements.md](02%20-%20obsidian-ver/01%20-%20Crow_Systems/7%20-%20Statements.md)
 
-## obs.ver - 02 - Research ##
+#### 02 - Research ####
 
 - [(index) - 02 - Research.md](02%20-%20obsidian-ver/02%20-%20Research/(index)%20-%2002%20-%20Research.md)
 - [1 - Evidence Landscape Brief.md](02%20-%20obsidian-ver/02%20-%20Research/1%20-%20Evidence%20Landscape%20Brief.md)
 - [2 - Bench & Enviornmental Test Plan.md](02%20-%20obsidian-ver/02%20-%20Research/2%20-%20Bench%20&%20Enviornmental%20Test%20Plan.md)
 
-## obs.ver - 03 - Evidence Block ##
+#### 03 - Evidence Block ####
 
 - [(index) - 03 - Evidence Block.md](02%20-%20obsidian-ver/03%20-%20Evidence%20Block/(index)%20-%2003%20-%20Evidence%20Block.md)
 - [2 - Supporting Research.md](02%20-%20obsidian-ver/03%20-%20Evidence%20Block/2%20-%20Supporting%20Research.md)
@@ -141,34 +170,34 @@ This document contains the directory tree index for the Crow-Drone-Systems proje
 - [5 - Marking, Tracking, and Drop Accuracy.md](02%20-%20obsidian-ver/03%20-%20Evidence%20Block/5%20-%20Marking%2C%20Tracking%2C%20and%20Drop%20Accuracy.md)
 - [6 - Night & Low-Light Detection.md](02%20-%20obsidian-ver/03%20-%20Evidence%20Block/6%20-%20Night%20&%20Low-Light%20Detection.md)
 - [7 - Coverage Time vs. Sea State.md](02%20-%20obsidian-ver/03%20-%20Evidence%20Block/7%20-%20Coverage%20Time%20vs.%20Sea%20State.md)
-- [8 - A) Multi-UAV.md](02%20-%20obsidian-ver/03%20-%20Evidence%20Block/8%20-%20A)%20Multi-UAV.md
-- [8 - B) Multi-UAV.md](02%20-%20obsidian-ver/03%20-%20Evidence%20Block/8%20-%20B)%20Multi-UAV.md
+- [8 - A) Multi-UAV.md](02%20-%20obsidian-ver/03%20-%20Evidence%20Block/8%20-%20A%20Multi-UAV.md)
+- [8 - B) Multi-UAV.md](02%20-%20obsidian-ver/03%20-%20Evidence%20Block/8%20-%20B%20Multi-UAV.md)
 
-## obs.ver - 04 - Claims ##
+#### 04 - Claims ####
 
 - [(index) - 04 - Claims.md](02%20-%20obsidian-ver/04%20-%20Claims/(index)%20-%2004%20-%20Claims.md)
 - [1 - Drones cut time.md](02%20-%20obsidian-ver/04%20-%20Claims/1%20-%20Drones%20cut%20time.md)
 - [2 - Detection Probability.md](02%20-%20obsidian-ver/04%20-%20Claims/2%20-%20Detection%20Probability.md)
-- [3 - A) CROW Drone Format.md](02%20-%20obsidian-ver/04%20-%20Claims/3%20-%20A)%20CROW%20Drone%20Format.md
-- [3 - B) CROW Drone Format.md](02%20-%20obsidian-ver/04%20-%20Claims/3%20-%20B)%20CROW%20Drone%20Format.md
+- [3 - A) CROW Drone Format.md](02%20-%20obsidian-ver/04%20-%20Claims/3%20-%20A%20CROW%20Drone%20Format.md)
+- [3 - B) CROW Drone Format.md](02%20-%20obsidian-ver/04%20-%20Claims/3%20-%20B%20CROW%20Drone%20Format.md)
 - [4 - CROW Real World Use Case.md](02%20-%20obsidian-ver/04%20-%20Claims/4%20-%20CROW%20Real%20World%20Use%20Case.md)
 - [5 - Tool Deployment.md](02%20-%20obsidian-ver/04%20-%20Claims/5%20-%20Tool%20Deployment.md)
 - [6 - Probability over Uniform Patterns.md](02%20-%20obsidian-ver/04%20-%20Claims/6%20-%20Probability%20over%20Uniform%20Patterns.md)
-- [7 - A) Data Capturing & Audit.md](02%20-%20obsidian-ver/04%20-%20Claims/7%20-%20A)%20Data%20Capturing%2004%20-%20Claims/7%20-%20A)%20Data%20Capturing%20&%20Audit.md)%20Audit.md
-- [7 - B) Supporting Example.md](02%20-%20obsidian-ver/04%20-%20Claims/7%20-%20B)%20Supporting%20Example.md)
+- [7 - A) Data Capturing & Audit.md](02%20-%20obsidian-ver/04%20-%20Claims/7%20-%20A%20Data%20Capturing%20&%20Audit.md)
+- [7 - B) Supporting Example.md](02%20-%20obsidian-ver/04%20-%20Claims/7%20-%20B%20Supporting%20Example.md)
 - [8 - Cost & Benefit](02%20-%20obsidian-ver/04%20-%20Claims/8%20-%20Cost%20&%20Benefit)
 
-## obs.ver - 05 - Post Prototype ##
+#### 05 - Post Prototype ####
 
 - [(index) - 05 - Post Prototype.md](02%20-%20obsidian-ver/05%20-%20Post%20Prototype/(index)%20-%2005%20-%20Post%20Prototype.md)
 - [01 - A) Harbor Trial Protocols.md](02%20-%20obsidian-ver/05%20-%20Post%20Prototype/01%20-%20A)%20Harbor%20Trial%20Protocols.md)
 - [01 - A) Open-Sea Trial Protocols.md](02%20-%20obsidian-ver/05%20-%20Post%20Prototype/01%20-%20A)%20Open-Sea%20Trial%20Protocols.md)
 
-## obs.ver - 99 - META ##
+#### 99 - META ####
 
 - [(index) - 99 - META.md](02%20-%20obsidian-ver/99%20-%20META/(index)%20-%2099%20-%20META.md)
 
-## obs.ver - 00 - Templates ##
+##### 00 - Templates #####
 
 - [(index) - 00 - Templates.md](02%20-%20obsidian-ver/99%20-%20META/00%20-%20Templates/(index)%20-%2000%20-%20Templates.md)
 - [(TEMPLATE) Crow Index Minimal.md](02%20-%20obsidian-ver/99%20-%20META/00%20-%20Templates/(TEMPLATE)%20Crow%20Index%20Minimal.md)
@@ -179,7 +208,7 @@ This document contains the directory tree index for the Crow-Drone-Systems proje
 - [(TEMPLATE) Index.md](02%20-%20obsidian-ver/99%20-%20META/00%20-%20Templates/(TEMPLATE)%20Index.md)
 - [(TEMPLATE) Unique.md](02%20-%20obsidian-ver/99%20-%20META/00%20-%20Templates/(TEMPLATE)%20Unique.md)
 
-## obs.ver - Preloaded Classes ##
+##### Preloaded Classes #####
 
 - [(index) - Preloaded Classes.md](02%20-%20obsidian-ver/99%20-%20META/Preloaded%20Classes/(index)%20-%20Preloaded%20Classes.md)
 - [202401211512 Notebook CSS Classes.md](02%20-%20obsidian-ver/99%20-%20META/Preloaded%20Classes/202401211512%20Notebook%20CSS%20Classes.md)

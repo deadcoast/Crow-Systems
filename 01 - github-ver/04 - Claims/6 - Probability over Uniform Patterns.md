@@ -1,8 +1,8 @@
-# CLAIM — “Probability-weighted search beats uniform patterns.”
+# CLAIM — “Probability-weighted search beats uniform patterns.” #
 
 Probability-weighted search is not experimental: it is codified in **IAMSAR**, operationalized in **USCG SAROPS**, and mathematically proven since Koopman. Applying this doctrine at UAV scale means `CROW` sorties concentrate endurance where it matters, yielding **faster detection and higher overall POS** than uniform grid searches.
 
-## A) Independent Evidence
+## A) Independent Evidence ##
 
 1. **Search theory foundations**
 
@@ -21,7 +21,7 @@ Probability-weighted search is not experimental: it is codified in **IAMSAR**, o
 
 ---
 
-### Relative Evidence
+### Relative Evidence ###
 
 1. **USCG “Theory of Search – A Simplified Explanation”**  
     Defines **POS = POC × POD** and shows why allocating effort proportional to probability density raises expected detection.  
@@ -29,7 +29,7 @@ Probability-weighted search is not experimental: it is codified in **IAMSAR**, o
 
 2. **SAROPS (Search And Rescue Optimal Planning System)**  
     USCG operational system that generates **probability density surfaces** from drift models, then prescribes weighted patterns.  
-    🔗 [USCG SAROPS Info Sheet](https://www.dco.uscg.mil/Portals/9/CG-5R/SARfactsInfo/SAROPSInforSheet.pdf)
+    🔗 [USCG SAROPS Info Sheet](https://www.uscg.mil/Our-Organization/Assistant-Commandant-for-Acquisitions-CG-9/International-Acquisition/SAROPS/)
 
 3. **IAMSAR doctrine**  
     IAMSAR Vol. II states that search patterns should **adapt to high-probability areas first**, not uniform coverage.  
@@ -39,7 +39,7 @@ Probability-weighted search is not experimental: it is codified in **IAMSAR**, o
     Peer-reviewed analyses show weighted search improves time-to-detection vs. uniform methods.  
     🔗 [ScienceDirect – Probabilistic modeling of SAR coverage](https://www.sciencedirect.com/science/article/abs/pii/S0029801823027877)
 
-### Additional Areas for Research
+### Additional Areas for Research ###
 
 - **Bayesian drift modeling**: Incorporate **NOAA’s SAROPS drift modules** (stochastic particle models) as inputs to UAV grid planning.
 - **Monte Carlo validation**: Run retrospective analyses on historic MOB drift cases to quantify how fast the target leaves uniform search cells vs. how weighted search captures them.
@@ -48,7 +48,7 @@ Probability-weighted search is not experimental: it is codified in **IAMSAR**, o
 
 ---
 
-## B) Quantitative thresholds
+## B) Quantitative thresholds ##
 
 - **Coverage factor (C):** defined as W/S, where W = sweep width, S = track spacing. Weighted search aims for **C ≈ 1 in high-prob zones** and **C < 1 in low-prob zones**, raising overall POS.
 - **POS uplift:** SAROPS evaluations report **10–30% higher expected success** vs uniform patterns under realistic wind/current.
@@ -56,7 +56,7 @@ Probability-weighted search is not experimental: it is codified in **IAMSAR**, o
 
 ---
 
-## C) Binder-ready statements
+## C) Binder-ready statements ##
 
 - “Search theory shows distributing effort in proportion to **probability density** yields higher POS than uniform coverage.”
 - “USCG SAROPS and IAMSAR doctrine formalize probability-weighted search; the approach is operational, not experimental.”
@@ -64,33 +64,33 @@ Probability-weighted search is not experimental: it is codified in **IAMSAR**, o
 
 ---
 
-## D) Evidence table
+## D) Evidence table ##
 
 |Source|Finding|Link|
 |---|---|---|
 |USCG “Theory of Search”|POS = POC × POD; weighted effort improves POS|[PDF](https://navcen.uscg.gov/sites/default/files/pdf/Theory_of_Search.pdf)|
-|SAROPS factsheet|Probability density surfaces → search allocation|[PDF](https://www.dco.uscg.mil/Portals/9/CG-5R/SARfactsInfo/SAROPSInforSheet.pdf)|
+|SAROPS factsheet|Probability density surfaces → search allocation|[PDF](https://www.uscg.mil/Our-Organization/Assistant-Commandant-for-Acquisitions-CG-9/International-Acquisition/SAROPS/)|
 |IAMSAR Manual|Search effort prioritized by probability zones|[IMO/IAMSAR ref](https://maritimesafetyinnovationlab.org/wp-content/uploads/2021/02/Doc.9731-EN-IAMSAR-Manual-International-Aeronautical-and-Maritime-Search-and-Rescue-Manual-Volume-III-Mobile-Facilities.pdf)|
 |Simulation study|Weighted search improves detection vs uniform|[ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S0029801823027877)|
 
 ---
 
-## E) Payload BOM (information payload for probability-weighted search)
+## E) Payload BOM (information payload for probability-weighted search) ##
 
 |Component|Reference|Link|
 |---|---|---|
-|Drift model input|SAROPS drift/particle module|[SAROPS factsheet](https://www.dco.uscg.mil/Portals/9/CG-5R/SARfactsInfo/SAROPSInforSheet.pdf)|
+|Drift model input|SAROPS drift/particle module|[SAROPS factsheet](https://www.uscg.mil/Our-Organization/Assistant-Commandant-for-Acquisitions-CG-9/International-Acquisition/SAROPS/)|
 |Environmental data|NOAA current/wind|[NOAA Ocean Prediction Center](https://ocean.weather.gov/)|
 |Sweep width tables|USCG Theory of Search|[PDF](https://navcen.uscg.gov/sites/default/files/pdf/Theory_of_Search.pdf)|
 |Onboard compute|NVIDIA Jetson edge AI module|[NVIDIA Jetson Orin NX](https://developer.nvidia.com/embedded/jetson-orin)|
-|Mission software|SAROPS principles / search planner|[SAROPS factsheet](https://www.dco.uscg.mil/Portals/9/CG-5R/SARfactsInfo/SAROPSInforSheet.pdf)|
+|Mission software|SAROPS principles / search planner|[SAROPS factsheet](https://www.uscg.mil/Our-Organization/Assistant-Commandant-for-Acquisitions-CG-9/International-Acquisition/SAROPS/)|
 |Data link|Maritime UAV comms hardware|[DJI Dock LTE/Satcom module](https://enterprise.dji.com/dock)|
 
 **Mass impact:** ~350 g (compute + modem). Fits standard UAV payload capacity.
 
 ---
 
-## E) Evidence table
+## E) Evidence table ##
 
 | Source / System         | Finding                                              | Business translation       |
 | ----------------------- | ---------------------------------------------------- | -------------------------- |
@@ -100,7 +100,7 @@ Probability-weighted search is not experimental: it is codified in **IAMSAR**, o
 | SAROPS (USCG)           | Operational system, probability density grids        | Real-world precedent       |
 | Simulation studies      | 10–30% higher detection rates vs uniform             | Quantitative claim support |
 
-## Payload BOM (Claim 6)
+## Payload BOM (Claim 6) ##
 
 (Note: BOM relevant here is software/data payload, not physical. To maintain consistency, here is a one-page listing of the “information payload” required for probability-weighted search.)
 

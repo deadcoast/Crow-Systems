@@ -1,6 +1,6 @@
-# CLAIM — “CROW remains effective in real maritime conditions.”
+# CLAIM — “CROW remains effective in real maritime conditions.” #
 
-## A. Independent evidence (triangulated)
+## A. Independent evidence (triangulated) ##
 
 1. **Wind & weatherability of enterprise UAVs (envelope anchor)**
 
@@ -34,7 +34,7 @@
 
 ---
 
-## B. Additional research areas (beyond the prompt)
+## B. Additional research areas (beyond the prompt) ##
 
 - **Spray on optics**: effect of sea-spray on LWIR lens transmissivity; evaluate **hydrophobic/oleophobic coatings** and **wiper/air-knife** options. (Tie to IR attenuation note.) ([Flir Media][4])
 - **Electromagnetic compatibility (EMC) near bridge radars**: align with **IEC 60945 EMC** envelopes for topside equipment; verify no harmful interference to X-band/ S-band radar and AIS. ([ITEH Standards][7])
@@ -43,11 +43,11 @@
 
 ---
 
-## C. Quantitative operating thresholds (business-plan ready)
+## C. Quantitative operating thresholds (business-plan ready) ##
 
 1. **Spray / water drops on optics (lens transmission loss)**
 
-   - **FLIR Tech Note (TN-0001 “Atmospheric Effects & Scattering”)** discusses **water droplet attenuation & scattering in IR**, quantifying how accumulation of **saltwater droplets** reduces IR transmissivity over time. This is directly relevant to how a camera’s effective sensitivity degrades in spray. ([flirmedia.com](https://www.flirmedia.com/MMC/CVS/Tech_Notes/TN_0001_EN.pdf?utm_source=chatgpt.com))
+   - **FLIR Tech Note (TN-0001 “Atmospheric Effects & Scattering”)** discusses **water droplet attenuation & scattering in IR**, quantifying how accumulation of **saltwater droplets** reduces IR transmissivity over time. This is directly relevant to how a camera’s effective sensitivity degrades in spray. ([flirmedia.com](https://www.flir.com/support-center/iid/knowledge-base/thermal-imaging-basics/))
    - Use that to derive a **derating multiplier** on detection range in heavy spray environments.
 
 2. **Rain attenuation / IR scattering (fog, drizzle)**
@@ -74,7 +74,7 @@
 - **RF link near hull**: enforce **min standoff** and **line-of-sight corridor** during auto-launch; avoid mast shadow per Fresnel/multipath analysis. ([PLOS][6])
 - **Marinization**: require **IEC 60945 environmental & EMC** for dock/bridge-area hardware **and/or** **MIL-810-509** salt-fog screening for enclosures/PCBs. ([ITEH Standards][7])
 
-## D. Binder-ready statements (paste-in)
+## D. Binder-ready statements (paste-in) ##
 
 - “The airframe is **IP-rated (IP55/IP45)** and validated for **~12–15 m/s winds**, matching **Beaufort 5–6** where whitecaps are frequent; these conditions cover the majority of cruise itineraries. Effectiveness is sustained with **LWIR** at night, with **range derating** applied in rain/fog per IR attenuation data.” ([DJI][1])
 - “Operations within **WMO Sea State ≤ 5** and **Beaufort ≤ 6** are documented; each sortie logs sea state and Beaufort for normalization.” ([NODC][3])
@@ -84,7 +84,7 @@
 
 ---
 
-## E. Evidence table (for the business plan)
+## E. Evidence table (for the business plan) ##
 
 | Condition        | Evidence                             | Key datum                               | Operational translation                            |
 | ---------------- | ------------------------------------ | --------------------------------------- | -------------------------------------------------- |
@@ -99,18 +99,18 @@
 
 ---
 
-## F. One-paragraph executive wording
+## F. One-paragraph executive wording ##
 
 Enterprise-class UAVs with **IP-rated airframes (IP55/IP45)** and **12–15 m/s wind resistance** remain operational across the **Beaufort 5–6** band typical of open-sea conditions near cruise vessels. **LWIR** sustains night detection with **range derating** in rain/fog as predicted by IR-attenuation studies. Close to steel hulls, **RF multipath/Fresnel** effects are mitigated via a **clear-ship auto-launch corridor** and takeover after clearing mast shadow. Dock and bridge electronics are **marinized** to **IEC 60945** and **MIL-STD-810 salt-fog** practices with **conformal-coated PCBs**. Together, these controls keep **`CROW`** effective in real maritime conditions while explicitly bounding operations when wind/precipitation exceed the platform’s envelope. ([DJI][1])
 
-[1]: https://enterprise.dji.com/matrice-350-rtk?utm_source=chatgpt.com "Matrice 350 RTK"
-[2]: https://www.dji.com/support/product/matrice-300?utm_source=chatgpt.com "Support for Matrice 300 RTK"
-[3]: https://www.nodc.noaa.gov/gtspp/document/codetbls/wmocodes/table3700.html?utm_source=chatgpt.com "About WMO Code Table 3700"
-[4]: https://www.flirmedia.com/MMC/CVS/Tech_Notes/TN_0001_EN.pdf?utm_source=chatgpt.com "Seeing through fog and rain with a thermal imaging camera - flir"
-[5]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9699133/?utm_source=chatgpt.com "Analysis of Thermal Imaging Performance under Extreme ..."
+[1]: https://enterprise.dji.com/matrice-350-rtk "Matrice 350 RTK"
+[2]: https://www.dji.com/support/product/matrice-300 "Support for Matrice 300 RTK"
+[3]: https://www.nodc.noaa.gov/gtspp/document/codetbls/wmocodes/table3700.html "About WMO Code Table 3700"
+[4]: https://www.flir.com/support-center/iid/knowledge-base/thermal-imaging-basics/ "Seeing through fog and rain with a thermal imaging camera - flir"
+[5]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9699133/ "Analysis of Thermal Imaging Performance under Extreme ..."
 [6]: https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0245004&utm_source=chatgpt.com "Analysis of the operating conditions for UAV-based on-board ..."
-[7]: https://cdn.standards.iteh.ai/samples/6359/5e7d127ed2e74ba1af3aee001a7ca5cb/IEC-60945-2002.pdf?utm_source=chatgpt.com "IEC 60945:2002"
-[8]: https://cvgstrategy.com/wp-content/uploads/2019/08/MIL-STD-810H-Method-509.7-Salt-Fog.pdf?utm_source=chatgpt.com "MIL-STD-810H-Method-509.7-Salt-Fog. ..."
-[9]: https://electrolube.com/knowledge_base/what-are-conformal-coatings/?utm_source=chatgpt.com "What Are Conformal Coatings? Everything you need to know"
-[10]: https://www.royalnavy.mod.uk/news/2021/july/02/210702-drone-trials-mob?utm_source=chatgpt.com "Navy tests drones in man overboard trials"
-[11]: https://www.iec.ch/ip-ratings?utm_source=chatgpt.com "Ingress Protection (IP) ratings"
+[7]: https://cdn.standards.iteh.ai/samples/6359/5e7d127ed2e74ba1af3aee001a7ca5cb/IEC-60945-2002.pdf "IEC 60945:2002"
+[8]: https://cvgstrategy.com/wp-content/uploads/2019/08/MIL-STD-810H-Method-509.7-Salt-Fog.pdf "MIL-STD-810H-Method-509.7-Salt-Fog. ..."
+[9]: https://electrolube.com/knowledge_base/what-are-conformal-coatings/ "What Are Conformal Coatings? Everything you need to know"
+[10]: https://www.royalnavy.mod.uk/news/2021/july/02/210702-drone-trials-mob "Navy tests drones in man overboard trials"
+[11]: https://www.iec.ch/ip-ratings "Ingress Protection (IP) ratings"

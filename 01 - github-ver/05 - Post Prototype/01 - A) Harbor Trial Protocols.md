@@ -1,10 +1,10 @@
-# Step 3 — Harbor Trial Protocols (Controlled Near-Shore Testing)
+# Step 3 — Harbor Trial Protocols (Controlled Near-Shore Testing) #
 
 Now that the bench/environmental stage has validated the hardware, we move to **harbor trials**. Purpose: collect controlled, high-quality data in calm water with known target placements, to tune detectors, validate probability-weighted search overlays, and measure real-world performance under repeatable conditions.
 
 ---
 
-## 3.1 Trial Objectives
+## 3.1 Trial Objectives ##
 
 - Validate **time-to-first-visual (TTFV)** improvements in realistic but controlled conditions.
 - Build a **labeled dataset** of thermal + RGB imagery for detector tuning.
@@ -15,7 +15,7 @@ Now that the bench/environmental stage has validated the hardware, we move to **
 
 ---
 
-## 3.2 Site Requirements
+## 3.2 Site Requirements ##
 
 - Calm-water basin or harbor with vessel access.
 - Safety boat on standby at all times.
@@ -25,7 +25,7 @@ Now that the bench/environmental stage has validated the hardware, we move to **
 
 ---
 
-## 3.3 Test Equipment
+## 3.3 Test Equipment ##
 
 - **`CROW` drone system** (1–2 units).
 - **Dock** with AC supply, weatherproof mount near deck rail.
@@ -38,7 +38,7 @@ Now that the bench/environmental stage has validated the hardware, we move to **
 
 ---
 
-## 3.4 Run-of-Show (Daily Drill Sequence)
+## 3.4 Run-of-Show (Daily Drill Sequence) ##
 
 1. **Pre-trial checks:** battery health, payload function test, dock diagnostics.
 2. **Place MOB manikin:** quietly deployed from safety boat, distance 50–200 m from vessel, GPS marked. Clothing varied (dark, light, reflective).
@@ -55,7 +55,7 @@ Repeat **5–10 drills/day** with varying conditions.
 
 ---
 
-## 3.5 Variables & Conditions to Test
+## 3.5 Variables & Conditions to Test ##
 
 - **Lighting:** day vs. night (with nav lights background).
 - **Clothing:** dark clothing, light clothing, reflective strips.
@@ -66,27 +66,26 @@ Repeat **5–10 drills/day** with varying conditions.
 
 ---
 
-## 3.6 Metrics to Capture
+## 3.6 Metrics to Capture ##
 
-- **Primary:**
+Primary:
+    - TTFV (s) vs. baseline (human lookouts).
+    - Pdet within 200 m.
 
-  - TTFV (s) vs. baseline (human lookouts).
-  - Pdet within 200 m.
-- **Secondary:**
+Secondary:
+    - False positives per minute.
+    - Pilot takeover latency (alarm→control, target ≤ 60 s p95).
+    - Payload drop CEP (≤10 m drift).
+    - Beacon CEP (≤10 m hold).
 
-  - False positives per minute.
-  - Pilot takeover latency (alarm→control, target ≤ 60 s p95).
-  - Payload drop CEP (≤10 m drift).
-  - Beacon CEP (≤10 m hold).
-- **Exploratory:**
-
-  - Detector ROC/AUC from labeled frames.
-  - Pilot workload (NASA-TLX).
-  - HUD usefulness feedback.
+Exploratory:
+    - Detector ROC/AUC from labeled frames.
+    - Pilot workload (NASA-TLX).
+    - HUD usefulness feedback.
 
 ---
 
-## 3.7 Test Cards (example format)
+## 3.7 Test Cards (example format) ##
 
 **Test Card ID:** HARBOR-03
 **Objective:** Night detection, dark clothing, 100 m placement
@@ -97,7 +96,7 @@ Repeat **5–10 drills/day** with varying conditions.
 
 ---
 
-## 3.8 Acceptance Thresholds (Harbor Stage)
+## 3.8 Acceptance Thresholds (Harbor Stage) ##
 
 - Median TTFV < 60 s in calm conditions.
 - Pdet ≥ 0.9 within 200 m.
@@ -108,7 +107,7 @@ Repeat **5–10 drills/day** with varying conditions.
 
 ---
 
-## 3.9 Records & Deliverables
+## 3.9 Records & Deliverables ##
 
 - **Raw logs:** telemetry, video (thermal + RGB), bridge BIU log.
 - **Synced video reels:** side-by-side drone HUD + GoPro deck view.
@@ -118,7 +117,7 @@ Repeat **5–10 drills/day** with varying conditions.
 
 ---
 
-## 3.10 Sources
+## 3.10 Sources ##
 
 - Ruth Lee “Oscar” manikin specifications for MOB drills.
 - USCG MOB drill guidance and probability-of-detection emphasis.

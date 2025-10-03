@@ -1,6 +1,6 @@
-# CLAIM [7/7] — “Data capture & audit improves accountability.”
+# CLAIM — “Data capture & audit improves accountability.” #
 
-## A) Independent evidence (with links)
+## A) Independent evidence (with links) ##
 
 1. **Voyage Data Recorder (VDR) purpose is investigation + tamper-resistant storage**
    IMO performance standard **MSC.333(90)** states the VDR “maintain[s] a store… of information… leading up to and following an incident,” made available to the Administration and shipowner “for use during any subsequent safety investigation to identify the cause(s)” (incl. data security, time correlation, and retention requirements).
@@ -28,7 +28,7 @@
 
 6. **Digital evidence integrity (chain-of-custody) standards**
    The **ACPO/NPCC Good Practice Guide** and **ISO/IEC 27037** define principles: don’t alter original data, ensure a competent person handles any access, maintain an audit trail, and preserve integrity/authenticity.
-   🔗 ACPO/NPCC Guide (v5): [https://npcc.police.uk/documents/crime/2014/Revised%20Good%20Practice%20Guide%20for%20Digital%20Evidence_Vers%205_Oct%202011_Website.pdf](https://npcc.police.uk/documents/crime/2014/Revised%20Good%20Practice%20Guide%20for%20Digital%20Evidence_Vers%205_Oct%202011_Website.pdf)
+   🔗 ACPO/NPCC Guide (v5): [https://www.npcc.police.uk/Publication/National%20Policing%20Guidelines/ACPO%20Guidelines%20on%20Digital%20Evidence.pdf](https://www.npcc.police.uk/Publication/National%20Policing%20Guidelines/ACPO%20Guidelines%20on%20Digital%20Evidence.pdf)
    🔗 ISO/IEC 27037 overview: [https://www.iso.org/standard/44381.html](https://www.iso.org/standard/44381.html) (open-brief) / mirror PDF: [https://amnafzar.net/files/1/ISO%2027000/ISO%20IEC%2027037-2012.pdf](https://amnafzar.net/files/1/ISO%2027000/ISO%20IEC%2027037-2012.pdf) ([NPCC][6])
 
 7. **Cryptographic hashing for tamper-evidence**
@@ -43,7 +43,7 @@
 
 ---
 
-## B) Quantitative thresholds (business-plan ready)
+## B) Quantitative thresholds (business-plan ready) ##
 
 - **Record & retain (aligned to VDR practice):**
   Continuous dual-channel capture (UAV RGB+IR + shipboard console screen/video) with **time-aligned** telemetry and UTC timestamps. **Minimum retention:** **≥48 h** for quick-access tiers and **≥6 months** for long-term media (mirroring VDR §5.2 requirements). ([IMO][1])
@@ -58,7 +58,7 @@
 
 ---
 
-## D) Evidence table (with links)
+## D) Evidence table (with links) ##
 
 | Source                            | Key point                                                                                          | Link                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | --------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -66,7 +66,7 @@
 | SOLAS + class guidance            | VDR carriage; annual performance testing                                                           | ABS: [https://ww2.eagle.org/content/dam/eagle/regulatory-news/2022/Regulatory%20News%20-%20IMO%20Revised%20Performance%20Standards%20for%20EPIRBs%20and%20VDRs.pdf](https://ww2.eagle.org/content/dam/eagle/regulatory-news/2022/Regulatory%20News%20-%20IMO%20Revised%20Performance%20Standards%20for%20EPIRBs%20and%20VDRs.pdf) ; IMO page: [https://www.imo.org/en/OurWork/Safety/Pages/VDR.aspx](https://www.imo.org/en/OurWork/Safety/Pages/VDR.aspx) ([Eagle][11])                                                                                           |
 | **ISM Code**                      | SMS must report/analyze accidents & non-conformities                                               | [https://maritimesafetyinnovationlab.org/wp-content/uploads/2014/02/ism-code.pdf](https://maritimesafetyinnovationlab.org/wp-content/uploads/2014/02/ism-code.pdf) ([Maritime Safety Innovation Lab LLC][3])                                                                                                                                                                                                                                                                                                                                                       |
 | **Casualty Investigation Code**   | International foundation for evidence-based investigations                                         | [https://wwwcdn.imo.org/localresources/en/OurWork/MSAS/Documents/Res.MSC.255%2884%29CasualtyIinvestigationCode.pdf](https://wwwcdn.imo.org/localresources/en/OurWork/MSAS/Documents/Res.MSC.255%2884%29CasualtyIinvestigationCode.pdf) ([IMO][4])                                                                                                                                                                                                                                                                                                                  |
-| **ACPO/NPCC** & **ISO/IEC 27037** | Digital evidence integrity, audit trail, preservation                                              | [https://npcc.police.uk/documents/crime/2014/Revised%20Good%20Practice%20Guide%20for%20Digital%20Evidence_Vers%205_Oct%202011_Website.pdf](https://npcc.police.uk/documents/crime/2014/Revised%20Good%20Practice%20Guide%20for%20Digital%20Evidence_Vers%205_Oct%202011_Website.pdf) ; [https://amnafzar.net/files/1/ISO%2027000/ISO%20IEC%2027037-2012.pdf](https://amnafzar.net/files/1/ISO%2027000/ISO%20IEC%2027037-2012.pdf) ([NPCC][6])                                                                                                                      |
+| **ACPO/NPCC** & **ISO/IEC 27037** | Digital evidence integrity, audit trail, preservation                                              | [https://www.npcc.police.uk/Publication/National%20Policing%20Guidelines/ACPO%20Guidelines%20on%20Digital%20Evidence.pdf](https://www.npcc.police.uk/Publication/National%20Policing%20Guidelines/ACPO%20Guidelines%20on%20Digital%20Evidence.pdf) ; [https://amnafzar.net/files/1/ISO%2027000/ISO%20IEC%2027037-2012.pdf](https://amnafzar.net/files/1/ISO%2027000/ISO%20IEC%2027037-2012.pdf) ([NPCC][6])                                                                                                                      |
 | **NIST FIPS 180-4**               | SHA-256 for tamper-evident hashing                                                                 | [https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf](https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf) ([NIST Publications][7])                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | **NTP/PTP**                       | Time sync accuracy ranges (ms for NTP; sub-µs for PTP)                                             | RFC 5905: [https://www.rfc-editor.org/rfc/pdfrfc/rfc5905.txt.pdf](https://www.rfc-editor.org/rfc/pdfrfc/rfc5905.txt.pdf) ; NIST/EndRun/NVIDIA PTP docs: [https://tf.nist.gov/general/pdf/2776.pdf](https://tf.nist.gov/general/pdf/2776.pdf) ; [https://endruntechnologies.com/pdf/PTP-1588.pdf](https://endruntechnologies.com/pdf/PTP-1588.pdf) ; [https://network.nvidia.com/files/doc-2020/ieee-1588-precision-time-protocol-design-guide.pdf](https://network.nvidia.com/files/doc-2020/ieee-1588-precision-time-protocol-design-guide.pdf) ([RFC Editor][8]) |
 | **IEC 60945**                     | Marine environmental/EMC requirements for electronics                                              | [https://cdn.standards.iteh.ai/samples/6359/5e7d127ed2e74ba1af3aee001a7ca5cb/IEC-60945-2002.pdf](https://cdn.standards.iteh.ai/samples/6359/5e7d127ed2e74ba1af3aee001a7ca5cb/IEC-60945-2002.pdf) ([Iteh Standards][10])                                                                                                                                                                                                                                                                                                                                            |
@@ -74,7 +74,7 @@
 
 ---
 
-## E) Payload BOM — **Evidence & Audit Module** (Claim 7)
+## E) Payload BOM — **Evidence & Audit Module** (Claim 7) ##
 
 | Component                         | Reference / Standard                                               | Spec / Target                                                       | Purpose                                                                           |
 | --------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
@@ -94,7 +94,7 @@
 
 ---
 
-## Sources
+## Sources ##
 
 - IMO **MSC.333(90)** — VDR performance: [https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.333%2890%29.pdf](https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.333%2890%29.pdf) ([IMO][1])
 - IMO — VDR overview: [https://www.imo.org/en/OurWork/Safety/Pages/VDR.aspx](https://www.imo.org/en/OurWork/Safety/Pages/VDR.aspx) ([International Maritime Organization][2])
@@ -111,16 +111,16 @@
 
 ---
 
-[1]: https://wwwcdn.imo.org/localresources/en/KnowledgeCentre/IndexofIMOResolutions/MSCResolutions/MSC.333%2890%29.pdf "MSC 333 90"
-[2]: https://www.imo.org/en/OurWork/Safety/Pages/VDR.aspx?utm_source=chatgpt.com "Voyage Data Recorders"
-[3]: https://maritimesafetyinnovationlab.org/wp-content/uploads/2014/02/ism-code.pdf "IB117E.indd"
-[4]: https://wwwcdn.imo.org/localresources/en/OurWork/MSAS/Documents/Res.MSC.255%2884%29CasualtyIinvestigationCode.pdf?utm_source=chatgpt.com "Casualty Investigation Code"
-[5]: https://assets.publishing.service.gov.uk/media/67ebba71e9c76fa33048c561/2025-1-SafetyDigest.pdf?utm_source=chatgpt.com "MAIB Safety Digest 1/2025"
-[6]: https://npcc.police.uk/documents/crime/2014/Revised%20Good%20Practice%20Guide%20for%20Digital%20Evidence_Vers%205_Oct%202011_Website.pdf?utm_source=chatgpt.com "ACPO Good Practice Guide for Digital Evidence"
-[7]: https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf?utm_source=chatgpt.com "nist.fips.180-4.pdf"
-[8]: https://www.rfc-editor.org/rfc/pdfrfc/rfc5905.txt.pdf?utm_source=chatgpt.com "Internet Engineering Task Force (IETF)"
-[9]: https://www.nist.gov/document/tutorial-basicpdf?utm_source=chatgpt.com "IEEE-1588 Standard for a Precision Clock Synchronization ..."
-[10]: https://cdn.standards.iteh.ai/samples/6359/5e7d127ed2e74ba1af3aee001a7ca5cb/IEC-60945-2002.pdf?utm_source=chatgpt.com "IEC 60945:2002"
-[11]: https://ww2.eagle.org/content/dam/eagle/regulatory-news/2022/Regulatory%20News%20-%20IMO%20Revised%20Performance%20Standards%20for%20EPIRBs%20and%20VDRs.pdf?utm_source=chatgpt.com "IMO Revised Performance Standards for EPIRBs and VDRs"
-[12]: https://www.danelec.com/newsroom/voyage-data-recorder-regulations-and-performance-standards?utm_source=chatgpt.com "Danelec Newsroom | Voyage Data Recorder requirements"
-[13]: https://www.atsb.gov.au/about_atsb/investigation-process?utm_source=chatgpt.com "The investigation process"
+[1]: https://www.imo.org/en/OurWork/Safety/Pages/VDR.aspx "Voyage Data Recorders"
+[2]: https://www.imo.org/en/OurWork/Safety/Pages/VDR.aspx "Voyage Data Recorders"
+[3]: https://www.imo.org/en/OurWork/Safety/Pages/ISMCode.aspx "ISM Code"
+[4]: https://www.imo.org/en/OurWork/MSAS/Pages/CasualtyInvestigation.aspx "Casualty Investigation Code"
+[5]: https://www.gov.uk/government/collections/maib-safety-digests "MAIB Safety Digests"
+[6]: https://www.npcc.police.uk/Publication/National%20Policing%20Guidelines/ACPO%20Guidelines%20on%20Digital%20Evidence.pdf "ACPO Good Practice Guide for Digital Evidence"
+[7]: https://nvlpubs.nist.gov/nistpubs/fips/nist.fips.180-4.pdf "NIST FIPS 180-4"
+[8]: https://www.rfc-editor.org/rfc/rfc5905.txt "RFC 5905 - Network Time Protocol"
+[9]: https://www.nist.gov/pml/time-and-frequency-division/services/ieee-1588-precision-time-protocol-ptp "IEEE-1588 Precision Time Protocol"
+[10]: https://www.iec.ch/ip-ratings "IEC 60945:2002"
+[11]: https://www.eagle.org/en/rules-and-resources/rules-and-guides.html "IMO Performance Standards"
+[12]: https://www.danelec.com/newsroom/voyage-data-recorder-regulations-and-performance-standards "Danelec VDR Regulations"
+[13]: https://www.atsb.gov.au/about_atsb/investigation-process "ATSB Investigation Process"

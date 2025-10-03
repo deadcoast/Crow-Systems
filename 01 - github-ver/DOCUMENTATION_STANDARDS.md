@@ -1,182 +1,116 @@
-# CROW Documentation Standards
+# CROW Drone Systems - Documentation Standards #
 
-## Overview
+## Overview ##
 
-This document defines the professional formatting standards for the CROW Drone Systems documentation suite. These standards ensure consistency, readability, and proper GitHub rendering across all technical documents.
+This document establishes the professional documentation standards for the CROW (Coastal Rescue Operations with Wings) Drone Systems project.
 
-## Document Suite Structure
+## File Naming Conventions ##
 
-### Core Document Types
+### Directory Structure ###
 
-- **Proof of Concept**: Technical feasibility demonstrations
-- **Technical Documentation**: System specifications and implementation details  
-- **Research**: Evidence-based analysis and findings
-- **Mathematical Content**: Formulas and equations using MathJax
-- **Code Documentation**: Python, JavaScript, and other programming languages
+- **Primary directories**: Use numbered prefixes (01, 02, 03, etc.)
+- **Subdirectories**: Follow the same numbering scheme
+- **Index files**: Use `(index) - [Name].md` format
+- **Content files**: Use `[Number] - [Descriptive Name].md` format
 
-## Formatting Standards
+### File Naming Rules ###
 
-### File Naming Convention
+1. **Spaces**: Use spaces between words, not underscores or hyphens
+2. **Numbers**: Always use two-digit numbers with leading zeros (01, 02, 03, etc.)
+3. **Descriptive names**: Use clear, descriptive names that indicate content purpose
+4. **Consistency**: Maintain consistent naming patterns across all directories
 
-```
-[Number] - [Descriptive Title].md
-```
+## Markdown Formatting Standards ##
 
-Examples:
-- `1 - CROW Systems Overview.md`
-- `2 - Problem Statement.md`
-- `3 - Drone Spec.md`
+### Headers ###
 
-### Heading Structure
+- **Level 1**: Use ATX closed style (`# Header #`)
+- **Level 2**: Use ATX closed style (`## Header ##`)
+- **Level 3+**: Use ATX closed style (`### Header ###`)
+- **No duplicate headers**: Ensure each header is unique within its scope
 
-```markdown
-# Document Title (H1 - Single per file)
-## Section Title (H2)
-### Subsection Title (H3)
-#### Detail Title (H4)
-```
+### Lists ###
 
-### Link Formatting
+- **Indentation**: Use 4 spaces for nested lists
+- **Bullet points**: Use `-` for unordered lists
+- **Numbered lists**: Use `1.` for ordered lists
+- **Consistency**: Maintain consistent list formatting throughout
 
-#### Internal Links (GitHub-friendly)
-```markdown
-[Link Text](relative/path/to/file.md)
-[Link Text](01%20-%20github-ver/path/to/file.md)
-```
+### Links ###
 
-#### Reference Links
-```markdown
-[Link Text][1]
+- **Internal links**: Use relative paths with proper URL encoding
+- **External links**: Include full URLs with descriptive text
+- **GitHub links**: Use proper markdown link format for repository navigation
 
-[1]: https://example.com "Reference Title"
-```
+### Code Blocks ###
 
-### Code Blocks
+- **Fenced code blocks**: Use triple backticks with language specification
+- **Inline code**: Use single backticks
+- **Syntax highlighting**: Specify language for better readability
 
-#### Language-specific formatting
-````markdown
-```python
-def example_function():
-    return "Hello World"
-```
-````
+## Content Organization ##
 
-#### MathJax equations
-````markdown
-```math
-E = mc^2
-```
-````
+### Document Structure ###
 
-### Tables
+1. **Title**: Clear, descriptive title
+2. **Overview**: Brief description of the document's purpose
+3. **Main content**: Organized into logical sections
+4. **References**: Properly formatted citations and links
+5. **Metadata**: Include relevant tags and CSS classes where applicable
 
-Use GitHub-compatible table formatting:
+### Section Hierarchy ###
 
-```markdown
-| Column 1 | Column 2 | Column 3 |
-|----------|----------|----------|
-| Data 1   | Data 2   | Data 3   |
-```
+- **Primary sections**: Use H2 headers (`## Section ##`)
+- **Subsections**: Use H3 headers (`### Subsection ###`)
+- **Details**: Use H4+ headers as needed
+- **Consistent depth**: Maintain consistent header depth within documents
 
-### Mathematical Content
+## Quality Standards ##
 
-#### Inline Math
-```markdown
-The formula $E = mc^2$ demonstrates...
-```
+### Content Requirements ###
 
-#### Block Math
-```markdown
-$$
-\begin{align}
-P(x) &= \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
-\end{align}
-$$
-```
+- **Clarity**: Write clear, concise, and professional content
+- **Completeness**: Ensure all sections are fully developed
+- **Accuracy**: Verify all technical information and citations
+- **Consistency**: Maintain consistent tone and style throughout
 
-## Content Guidelines
+### Technical Standards ###
 
-### Technical Documentation
+- **Citations**: Include proper references to external sources
+- **Code examples**: Provide working, tested code examples
+- **Diagrams**: Use appropriate formatting for technical diagrams
+- **Data**: Present data in clear, readable formats
 
-1. **Clear Structure**: Use consistent heading hierarchy
-2. **Code Examples**: Include working code samples with explanations
-3. **References**: Link to authoritative sources
-4. **Diagrams**: Use Mermaid or ASCII art for visual elements
+## Validation ##
 
-### Research Documents
+### Markdownlint Compliance ###
 
-1. **Evidence-Based**: Support claims with citations
-2. **Methodology**: Clearly describe research methods
-3. **Results**: Present findings objectively
-4. **Conclusions**: Draw logical conclusions from evidence
+- All files must pass markdownlint validation
+- Use the project's `.markdownlint.jsonc` configuration
+- Fix any linting errors before committing changes
 
-### Mathematical Content
+### Content Review ###
 
-1. **Notation**: Use consistent mathematical notation
-2. **Units**: Include proper units in calculations
-3. **Derivations**: Show step-by-step mathematical derivations
-4. **Validation**: Verify mathematical accuracy
+- Review content for clarity and completeness
+- Verify all links are working and properly formatted
+- Ensure consistent formatting across all documents
 
-## Quality Assurance
+## Implementation ##
 
-### Pre-commit Checklist
+### File Organization ###
 
-- [ ] File follows naming convention
-- [ ] Single H1 heading per file
-- [ ] All links are valid and properly formatted
-- [ ] Code blocks have appropriate language tags
-- [ ] Mathematical content is properly formatted
-- [ ] Tables are properly aligned
-- [ ] No trailing whitespace
-- [ ] File ends with newline
+1. **Index files**: Create comprehensive index files for each directory
+2. **Cross-references**: Link related documents appropriately
+3. **Navigation**: Ensure easy navigation between related content
+4. **Searchability**: Use descriptive titles and content for better searchability
 
-### Linting Rules
+### Maintenance ###
 
-The project uses markdownlint with the following key rules:
-
-- **MD013**: Line length limit of 120 characters
-- **MD022**: Blank lines around headings
-- **MD025**: Single top-level heading per file
-- **MD031**: Blank lines around code blocks
-- **MD047**: Files must end with newline
-
-## GitHub Integration
-
-### Repository Structure
-
-```
-01 - github-ver/
-├── 00 - Maps of Content/     # Navigation indexes
-├── 01 - Crow_Systems/        # Core system documentation
-├── 02 - Research/            # Research and analysis
-├── 03 - Evidence Block/      # Evidence and validation
-├── 04 - Claims/              # Technical claims and proofs
-├── 05 - Post Prototype/      # Implementation protocols
-└── 99 - META/                # Templates and utilities
-```
-
-### Navigation
-
-Each section includes an index file that provides:
-- Overview of section contents
-- Links to all documents in the section
-- Cross-references to related sections
-
-## Maintenance
-
-### Regular Tasks
-
-1. **Link Validation**: Check that all internal links work
-2. **Format Consistency**: Ensure consistent formatting across documents
-3. **Content Updates**: Keep technical content current
-4. **Reference Verification**: Validate external links and citations
-
-### Version Control
-
-- Use descriptive commit messages
-- Tag major documentation releases
-- Maintain changelog for significant updates
+- **Regular updates**: Keep content current and accurate
+- **Version control**: Track changes and maintain document history
+- **Review cycles**: Implement regular content review processes
+- **Feedback integration**: Incorporate feedback to improve documentation
 
 ---
 
-*This document is part of the CROW Drone Systems documentation suite.*
+This document serves as the foundation for maintaining professional, organized documentation throughout the CROW Drone Systems project.

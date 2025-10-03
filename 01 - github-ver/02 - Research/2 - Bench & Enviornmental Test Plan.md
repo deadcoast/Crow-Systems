@@ -1,10 +1,10 @@
-# Step 2 — Bench & Environmental Test Plan (with procedures, instruments, thresholds, and sources)
+# Step 2 — Bench & Environmental Test Plan (with procedures, instruments, thresholds, and sources) #
 
 Goal: prove `CROW`’s **marine durability, launch reliability, and data integrity** before harbor/open-sea trials. Every test has: purpose → method → instrumentation → pass/fail thresholds → records → sources.
 
 ---
 
-## 2.1 Salt-fog (corrosion) — dock + drone assemblies
+## 2.1 Salt-fog (corrosion) — dock + drone assemblies ##
 
 **Purpose:** verify corrosion resistance of exposed metals/fasteners, coatings, connectors, and dock mechanisms in marine air.
 **Method:** neutral salt spray per **ASTM B117** / ISO 9227 reference. Continuous exposure at 35 °C; 5 % NaCl; fallout 1–3 mL/80 cm²/hr. 96 h for screening; 240 h for qualification on coated assemblies; visual check at 24 h increments. ([ASTM International | ASTM][1])
@@ -14,7 +14,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## 2.2 Ingress protection (spray/immersion) — drone, gimbal shroud, dock
+## 2.2 Ingress protection (spray/immersion) — drone, gimbal shroud, dock ##
 
 **Purpose:** verify rain/spray ingress resistance and (for dock) immersion resilience of seals/drains.
 **Method:** **IEC 60529 IPX6** (powerful jets) on drone airframe & gimbal shroud; **IPX7** immersion on dock floor pan/sump module; verify seals and drains. IPX6: 12.5 mm nozzle, ~100 kPa, 100 L/min, ≥3 min. IPX7: 1 m / 30 min. ([iec.ch][2])
@@ -24,7 +24,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## 2.3 Environmental (marine) — IEC/EN 60945 alignment
+## 2.3 Environmental (marine) — IEC/EN 60945 alignment ##
 
 **Purpose:** align with marine bridge/upper-deck electronics environmental expectations.
 **Method:** sample subset of **IEC/EN 60945** tests: temperature/humidity cycling, salt mist reference, shock/vibration, EMC pre-screen. (Formal type-approval not required for MVP, but test to comparable severities). ([Applus+ Keystone][3])
@@ -34,7 +34,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## 2.4 Rain/blowing rain (operational) — drone in powered state
+## 2.4 Rain/blowing rain (operational) — drone in powered state ##
 
 **Purpose:** ensure sustained prop-wash + rain does not ingress or destabilize avionics.
 **Method:** **MIL-STD-810H, Method 506.6** (blowing rain) tailored to drone footprint; operate motors at hover thrust under spray. ([Wikipedia][4])
@@ -44,7 +44,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## 2.5 Vibration & shock — dock on deck; drone in dock
+## 2.5 Vibration & shock — dock on deck; drone in dock ##
 
 **Purpose:** survivability under ship vibration and slamming shocks.
 **Method:** random vibration + functional shock referencing **MIL-STD-810H 514/516** tailoring and **60945** expectations for shipboard equipment. ([Wikipedia][4])
@@ -54,7 +54,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## 2.6 Auto-launch life-cycle — dock + aircraft
+## 2.6 Auto-launch life-cycle — dock + aircraft ##
 
 **Purpose:** prove the “seconds-matter” reliability of **auto-launch** and precision return.
 **Method:** **500 continuous cycles**: dock opens → aircraft auto-arms → liftoff to 2 m AGL → settle back → precision dock land; every 20th cycle include 10 m ascent and short translation to exercise guidance.
@@ -64,7 +64,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## 2.7 Video/C2 latency and link margin
+## 2.7 Video/C2 latency and link margin ##
 
 **Purpose:** guarantee pilot sees and acts within < 300 ms end-to-end.
 **Method:** optical time-stamping rig (LED flash in scene + photodiode trigger logged at controller); measure **glass-to-glass latency** at 1080p/60; measure C2 packet RTT under interference.
@@ -74,7 +74,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## 2.8 Battery safety & transport (UN 38.3)
+## 2.8 Battery safety & transport (UN 38.3) ##
 
 **Purpose:** ensure flight packs can be shipped & carried aboard safely.
 **Method:** cell/pack qualification to **UN 38.3** (T1–T8: altitude, thermal, vibration, shock, external short, impact, overcharge). Keep **PHMSA Test Summaries** on file for each pack SKU. ([PHMSA][5])
@@ -84,7 +84,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## 2.9 Thermal camera calibration & minimum pixel footprint
+## 2.9 Thermal camera calibration & minimum pixel footprint ##
 
 **Purpose:** validate IR detector sensitivity vs. altitude; set pilot altitude guidance.
 **Method:** mount calibrated **blackbody** targets (34–36 °C) on a water background; fly heights 10–120 m; compute **minimum pixel footprint** for head/shoulders; derive altitude→swath **w(h)** table used by HUD.
@@ -94,7 +94,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## 2.10 Buoy/dye/strobe actuation bench tests
+## 2.10 Buoy/dye/strobe actuation bench tests ##
 
 **Purpose:** guarantee clean release, inflation, and beacon function.
 **Method:** 50 dry firings (buoy CO₂), 20 wet; 30 dye; 30 strobe extended runs (≥ 30 min).
@@ -104,7 +104,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## 2.11 Detector pre-screen (lab/bench ROC)
+## 2.11 Detector pre-screen (lab/bench ROC) ##
 
 **Purpose:** ensure the IR-first detector/fusion pipeline is above a minimum ROC before harbor trials.
 **Method:** curated video corpus (thermal+RGB) of water surfaces (whitecaps/foam/kelp) + mannequins; run inference; generate ROC, choose thresholds (PING/ALERT/VERIFY) that hit target **AUC** and **FPR**.
@@ -114,7 +114,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## 2.12 Man-overboard mannequin procurement/spec check
+## 2.12 Man-overboard mannequin procurement/spec check ##
 
 **Purpose:** realistic signature & float posture in harbor/sea trials.
 **Method:** acquire **Ruth Lee “Oscar” MOB** (GEN2/MK2) or equivalent; verify **45° head-and-shoulders** float posture and mass spec (adult 88 lb). ([Rescue Equipment - RescueTECH1.com][6])
@@ -124,7 +124,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## 2.13 Documentation, EMC & cyber pre-checks
+## 2.13 Documentation, EMC & cyber pre-checks ##
 
 **Purpose:** ensure data integrity and bridge-safe behavior prior to shipboard power-up.
 **Method:** hash-chained telemetry files; TLS certs; **EMC** pre-scan for emissions; map to **IEC/EN 60945** EMC expectations for bridge gear. ([Applus+ Keystone][3])
@@ -134,7 +134,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-### Test Records Package (bench stage deliverables)
+### Test Records Package (bench stage deliverables) ###
 
 - **Bench Test Report**: each test’s raw data, plots, and pass/fail.
 - **Environmental Summary**: statement of conformance vs ASTM B117 / IEC 60529 IPX6/IPX7 / IEC/EN 60945 elements. ([ASTM International | ASTM][1])
@@ -144,7 +144,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## Notes on standards scope (to set reviewer expectations)
+## Notes on standards scope (to set reviewer expectations) ##
 
 - **ASTM B117** is a **comparative** corrosion method (not a life-prediction test) but is the global norm for screening coating/metal systems; we combine it with 60945 salt-mist expectations. ([DECRA Metal Roofing][8])
 - **IEC/EN 60945** is the **marine environmental/EMC anchor** for bridge equipment; we use it to frame severities (temp, humidity, shock/vibration, EMC) even though the drone/dock are auxiliary. ([Applus+ Keystone][3])
@@ -152,7 +152,7 @@ Goal: prove `CROW`’s **marine durability, launch reliability, and data integri
 
 ---
 
-## Dependency hand-off to Step 3 (Harbor Trials)
+## Dependency hand-off to Step 3 (Harbor Trials) ##
 
 Proceed only when all **critical gates** pass:
 
@@ -169,11 +169,11 @@ ASTM B117 & overviews (method, scope), IEC 60529 IP ratings (IPX6/IPX7), EN/IEC 
 
 If you’re good with this, I’ll move to **Step 3 — Harbor Trial Protocols** (test cards, run-of-show, data sheets, acceptance thresholds, and reporting templates) and keep the same level of detail and citations.
 
-[1]: https://www.astm.org/b0117-19.html?utm_source=chatgpt.com "Standard Practice for Operating Salt Spray (Fog) Apparatus"
-[2]: https://www.iec.ch/ip-ratings?utm_source=chatgpt.com "Ingress Protection (IP) ratings"
-[3]: https://keystonecompliance.com/en-60945/?utm_source=chatgpt.com "EN 60945 Maritime Navigation Device Compliance Testing"
-[4]: https://en.wikipedia.org/wiki/MIL-STD-810?utm_source=chatgpt.com "MIL-STD-810"
-[5]: https://www.phmsa.dot.gov/training/hazmat/new-un-requirement-test-summaries?utm_source=chatgpt.com "Lithium Battery Test Summaries (TS) | PHMSA"
-[6]: https://www.rescuetech1.com/ruth-lee-man-overboard-GEN2.aspx?utm_source=chatgpt.com "Ruth Lee \"Oscar\" Man Overboard Water Rescue Manikin"
-[7]: https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2024-09/Lithium-Battery-Test-Summary-2024.pdf?utm_source=chatgpt.com "Lithium Battery Test Summaries (TS)"
-[8]: https://www.decra.com/pro/astm-b117-the-salt-spray-test?utm_source=chatgpt.com "ASTM B117 – The Salt Spray Test"
+[1]: https://www.astm.org/b0117-19.html "Standard Practice for Operating Salt Spray (Fog) Apparatus"
+[2]: https://www.iec.ch/ip-ratings "Ingress Protection (IP) ratings"
+[3]: https://keystonecompliance.com/en-60945/ "EN 60945 Maritime Navigation Device Compliance Testing"
+[4]: https://en.wikipedia.org/wiki/MIL-STD-810 "MIL-STD-810"
+[5]: https://www.phmsa.dot.gov/training/hazmat/new-un-requirement-test-summaries "Lithium Battery Test Summaries (TS) | PHMSA"
+[6]: https://www.rescuetech1.com/ruth-lee-man-overboard-GEN2.aspx "Ruth Lee \"Oscar\" Man Overboard Water Rescue Manikin"
+[7]: https://www.phmsa.dot.gov/sites/phmsa.dot.gov/files/2024-09/Lithium-Battery-Test-Summary-2024.pdf "Lithium Battery Test Summaries (TS)"
+[8]: https://www.decra.com/pro/astm-b117-the-salt-spray-test "ASTM B117 – The Salt Spray Test"

@@ -1,6 +1,6 @@
-# CLAIM — “Auto-launch, then human-in-the-loop is safer and faster.”
+# CLAIM — “Auto-launch, then human-in-the-loop is safer and faster.” #
 
-## A. Independent evidence (triangulated)
+## A. Independent evidence (triangulated) ##
 
 1. **Auto-launch readiness and link latency**
 
@@ -28,7 +28,7 @@
 
 ---
 
-## B. Additional research areas (beyond the prompts) — source-anchored
+## B. Additional research areas (beyond the prompts) — source-anchored ##
 
 - **End-to-end latency budget** (camera → encoder → network → viewer): document **glass-to-glass** and command-loop timings; bind operating limits to **≤150–200 ms** per teleop literature. ([DJI][1])
 - **RF/EM environment near steel hulls**: characterize multipath & shadowing around superstructure; define **auto-launch corridor** and **handover altitude** for robust link margin (tie to latency thresholds above). ([VTT's Research Information Portal][4])
@@ -38,7 +38,7 @@
 
 ---
 
-## C. Quantitative thresholds suitable for a business plan
+## C. Quantitative thresholds suitable for a business plan ##
 
 - **Auto-launch → pilot-in-command (PIC) timeline:** target **wheels-up ≤90 s**, **PIC live feed ≤2 s after wheels-up**; maintain **video latency ≤150 ms** (dock spec shows 110–150 ms). ([DJI][1])
 - **Teleop safety guardband:** enforce **operational ceiling at ≤200 ms** total video delay; flag and inhibit aggressive maneuvers beyond that (based on teleop degradation thresholds). ([VTT's Research Information Portal][4])
@@ -47,7 +47,7 @@
 
 ---
 
-## D. Binder-ready statements (paste-in)
+## D. Binder-ready statements (paste-in) ##
 
 - “Automated dock launch reduces time-to-air; **Dock-class systems provide ~110–150 ms live-video latency**, enabling prompt PIC takeover with preserved teleoperation performance.” ([DJI][1])
 - “HITL after a **short, bounded autonomous IRD** is the safety-optimal regime per **supervisory-control** research; full autonomy in dynamic maritime scenes imposes higher edge-case risk.” ([Wiley Online Library][3])
@@ -57,7 +57,7 @@
 
 ---
 
-## E. Evidence table
+## E. Evidence table ##
 
 | Topic               | Evidence type         | Key finding                                                      | Business-plan threshold                     |
 | ------------------- | --------------------- | ---------------------------------------------------------------- | ------------------------------------------- |
@@ -71,19 +71,19 @@ Citations: ([DJI][1])
 
 ---
 
-## F. One-paragraph “why HITL is safer & faster” (executive wording)
+## F. One-paragraph “why HITL is safer & faster” (executive wording) ##
 
 Automated dock launch eliminates human scramble time and places sensors airborne immediately; with **~110–150 ms live video**, the pilot assumes control within seconds while conditions are still near the last-seen point. **Supervisory-control** research favors this hybrid regime over full autonomy for safety in complex scenes, and **teleoperation studies** show control quality is retained when end-to-end delay is **≤150–200 ms**. Given **UAS reliability (~10⁻³ failures/hr)** and battery availability constraints, constraining autonomy to **a short IRD window** and then flying under **HITL with HUD/Goggles** provides the documented balance of **speed (fastest launch)** and **safety (human judgment where it matters)**. ([DJI][1])
 
 If a technical annex is required, a latency budget (encode/transport/decode) and HUD symbology list can be produced with the above human-factors and latency sources.
 
-[1]: https://enterprise.dji.com/dock-2/specs?utm_source=chatgpt.com "DJI Dock 2 - Specs"
-[2]: https://enterprise.dji.com/dock-2?utm_source=chatgpt.com "DJI Dock 2"
-[3]: https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119636113.ch28?utm_source=chatgpt.com "HUMAN SUPERVISORY CONTROL OF AUTOMATION"
-[4]: https://cris.vtt.fi/files/109010051/futureinternet-16-00457-v2.pdf?utm_source=chatgpt.com "A Latency Composition Analysis for Telerobotic Performance ..."
-[5]: https://pmc.ncbi.nlm.nih.gov/articles/PMC4374455/?utm_source=chatgpt.com "Factors influencing the latency of simple reaction time - PMC"
-[6]: https://ntrs.nasa.gov/api/citations/20150010973/downloads/20150010973.pdf?utm_source=chatgpt.com "Flight Test of a Head-Worn Display as an Equivalent-HUD ..."
-[7]: https://pmc.ncbi.nlm.nih.gov/articles/PMC6165073/?utm_source=chatgpt.com "Reliability and Maintenance Analysis of Unmanned Aerial ..."
-[8]: https://pmc.ncbi.nlm.nih.gov/articles/PMC8477008/?utm_source=chatgpt.com "Let Me Take Over: Variable Autonomy for Meaningful ..."
-[9]: https://www.mdpi.com/2504-446X/9/8/539?utm_source=chatgpt.com "A Critical Review on the Battery System Reliability of Drone ..."
-[10]: https://www.cognaction.org/cogs105/readings/clemson.rt.pdf?utm_source=chatgpt.com "A Literature Review on Reaction Time"
+[1]: https://enterprise.dji.com/dock-2/specs "DJI Dock 2 - Specs"
+[2]: https://enterprise.dji.com/dock-2 "DJI Dock 2"
+[3]: https://onlinelibrary.wiley.com/doi/abs/10.1002/9781119636113.ch28 "Human Supervisory Control of Automation"
+[4]: https://cris.vtt.fi/files/109010051/futureinternet-16-00457-v2.pdf "A Latency Composition Analysis for Telerobotic Performance"
+[5]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4374455/ "Factors influencing the latency of simple reaction time"
+[6]: https://ntrs.nasa.gov/citations/20150010973 "Flight Test of a Head-Worn Display as an Equivalent-HUD"
+[7]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6165073/ "Reliability and Maintenance Analysis of Unmanned Aerial"
+[8]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8477008/ "Let Me Take Over: Variable Autonomy for Meaningful"
+[9]: https://www.mdpi.com/2504-446X/9/8/539 "A Critical Review on the Battery System Reliability of Drone"
+[10]: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4374455/ "A Literature Review on Reaction Time"

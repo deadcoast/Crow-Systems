@@ -1,6 +1,6 @@
-# Worked Example — Probability-Guided Multi-UAV Search (IAMSAR/USCG-consistent)
+# Worked Example — Probability-Guided Multi-UAV Search (IAMSAR/USCG-consistent) #
 
-## 1) Problem setup (numbers fixed for calculation)
+## 1) Problem setup (numbers fixed for calculation) ##
 
 - **Search datum:** last-known position ($LKP$) at ($t_0$); initial **search area** ($A=\pi r^2$) with ($r=600\ \text{m}$) ⇒ ($A = 1{,}130{,}973\ \text{m}^2$).
 - **Sensor/platform:** LWIR payload ($640×512$) on a maritime multirotor flying **($v=15\ \text{m/s}$)** at **($H=120\ \text{m}$)**. Horizontal FOV ≈ ($33^\circ$) (from DFOV $40.6°$ H20T spec), giving geometric swath ($W_{\text{geom}} \approx 71.1\ \text{m}$). For conservative **sweep width** in search-theory terms (IAMSAR: *“measure of sensor effectiveness”*), take ($W=57\ \text{m}$) ($≈ 80$% of geometric swath to reflect detection fall-off) at night. ([Maritime Safety Innovation Lab LLC][1])
@@ -11,7 +11,7 @@
 
 ---
 
-## 2) Time to cover once at (C=1) (IAMSAR geometry)
+## 2) Time to cover once at (C=1) (IAMSAR geometry) ##
 
 For parallel tracks, the **track length** needed to cover area ($A$) at spacing ($S$) is ($L = \dfrac{A}{S}$). Flight **time** for one UAV at ground speed ($v$):
 $$
@@ -29,7 +29,7 @@ $$
 
 ---
 
-## 3) Expected Probability of Success (POS) after one full sweep
+## 3) Expected Probability of Success (POS) after one full sweep ##
 
 USCG search theory uses **$POS = POC × POD$**, where **POC** is the integrated probability mass in the searched region and **POD** is the single-pass probability of detection at the chosen **coverage ($C$)**. ([Navigation Center][5])
 
@@ -43,7 +43,7 @@ If **only the high-probability half** (right side) is swept first (workload bala
 
 ---
 
-## 4) Within a fixed time budget (T^*) (e.g., 6 minutes): probability-weighted allocation
+## 4) Within a fixed time budget (T^*) (e.g., 6 minutes): probability-weighted allocation ##
 
 Available **time** ($T^*=360\ \text{s}$). With ($S=W$) and **two UAVs**, total area covered is:
 $$
@@ -58,7 +58,7 @@ Thus, **half the final one-sweep POS** is achieved in **$~27$%** of the full-swe
 
 ---
 
-## 5) Sensitivity to track spacing (changing (C))
+## 5) Sensitivity to track spacing (changing (C)) ##
 
 Track spacing ($S$) trades **time vs POD**:
 
@@ -74,13 +74,13 @@ Example (one UAV, ($A=1.131\ \text{km}^2), (v=15\ \text{m/s}), (W=57\ \text{m})$
 
 ---
 
-## 6) No-overlap partitioning (why multi-UAV efficiency holds)
+## 6) No-overlap partitioning (why multi-UAV efficiency holds) ##
 
 Coverage duplication wastes time and reduces POS gain per minute. **DARP** (Divide Areas Algorithm) provides **non-overlapping** partitions with balanced workload even in irregular regions/obstacles; it is widely cited for multi-robot coverage optimality. Applying DARP to the **probability map** (rather than area alone) equalizes **expected POS gain per minute** across UAVs and prevents re-searching the same lanes. ([SpringerLink][3])
 
 ---
 
-## 7) Standards and doctrine ties (verbatim anchors for reports)
+## 7) Standards and doctrine ties (verbatim anchors for reports) ##
 
 - **Coverage factor definition:** “**Coverage factor ($C$) … For parallel track searches, it may be computed as the ratio of sweep width ($W$) to track spacing ($S$). $C = W / S$.**” (IAMSAR Vol III; 2025 amendment MSC.1/Circ.1686.) ([Maritime Safety Innovation Lab LLC][1])
 - **POS identity and search logic:** USCG **“Theory of Search – A Simplified Explanation”** (POD/POC/POS, lateral range, sweep width). ([Navigation Center][5])
@@ -88,7 +88,7 @@ Coverage duplication wastes time and reduces POS gain per minute. **DARP** (Divi
 
 ---
 
-## 8) What the worked example demonstrates (numerical conclusions)
+## 8) What the worked example demonstrates (numerical conclusions) ##
 
 1. **Full one-pass coverage at ($C=1$)** requires **$≈22 min$** (one UAV) or **$≈11 min$** (two UAVs) for a 600 m-radius cell, given ($v=15\ \text{m/s}$) and ($W=57\ \text{m}$). (IAMSAR geometry.) ([Maritime Safety Innovation Lab LLC][1])
 2. **Expected ($POS$) after one pass** at ($C=1$) is **$≈0.79$**, using the RNLI/MCA empirical $POD$ at ($C=1$). ([Cranston Inquiry][2])
@@ -97,7 +97,7 @@ Coverage duplication wastes time and reduces POS gain per minute. **DARP** (Divi
 
 ---
 
-## Sources
+## Sources ##
 
 - **IAMSAR Manual, Vol III (Mobile Facilities)** — definitions; **($C=W/S$)**; search-pattern geometry. ([Maritime Safety Innovation Lab LLC][1])
 - **MSC.1/Circ.1686 (2025 IAMSAR amendments)** — current coverage-factor wording and related definitions. ([IRI | International Registries, Inc.][6])
@@ -106,9 +106,9 @@ Coverage duplication wastes time and reduces POS gain per minute. **DARP** (Divi
 - **DARP – Divide Areas Algorithm** — non-overlapping multi-robot coverage with balanced workload. ([SpringerLink][3])
 - **RNLI/MCA planning note** — empirical **$POD ≈ 79$% at ($C=1$)** used as a planning anchor. ([Cranston Inquiry][2])
 
-[1]: https://maritimesafetyinnovationlab.org/wp-content/uploads/2021/02/Doc.9731-EN-IAMSAR-Manual-International-Aeronautical-and-Maritime-Search-and-Rescue-Manual-Volume-III-Mobile-Facilities.pdf?utm_source=chatgpt.com "IAMSAR MANUAL"
-[2]: https://cranston.independent-inquiry.uk/wp-content/uploads/cranston-evidence/INQ000655_RNLI_MCA_agreement_on_search_and_rescue__SAR__operations_and_planning_provided_by_RNLI_01_11_2010.pdf?utm_source=chatgpt.com "INQ000655/1 - The Cranston Inquiry"
-[3]: https://link.springer.com/article/10.1007/s10846-016-0461-x?utm_source=chatgpt.com "DARP: Divide Areas Algorithm for Optimal Multi-Robot ..."
-[4]: https://www.dco.uscg.mil/Portals/9/CG-5R/SARfactsInfo/SAROPSInforSheet.pdf?utm_source=chatgpt.com "Search and Rescue Optimal Planning System (SAROPS)"
-[5]: https://navcen.uscg.gov/sites/default/files/pdf/Theory_of_Search.pdf?utm_source=chatgpt.com "The Theory of Search - A Simplified Explanation - navcen"
-[6]: https://www.register-iri.com/wp-content/uploads/MSC.1-Circ.1686.pdf?utm_source=chatgpt.com "MSC.1/Circ.1686 27 January 2025 AMENDMENTS TO ..."
+[1]: https://maritimesafetyinnovationlab.org/wp-content/uploads/2021/02/Doc.9731-EN-IAMSAR-Manual-International-Aeronautical-and-Maritime-Search-and-Rescue-Manual-Volume-III-Mobile-Facilities.pdf "IAMSAR MANUAL"
+[2]: https://cranston.independent-inquiry.uk/wp-content/uploads/cranston-evidence/INQ000655_RNLI_MCA_agreement_on_search_and_rescue__SAR__operations_and_planning_provided_by_RNLI_01_11_2010.pdf "INQ000655/1 - The Cranston Inquiry"
+[3]: https://link.springer.com/article/10.1007/s10846-016-0461-x "DARP: Divide Areas Algorithm for Optimal Multi-Robot ..."
+[4]: https://www.uscg.mil/Our-Organization/Assistant-Commandant-for-Acquisitions-CG-9/International-Acquisition/SAROPS/ "Search and Rescue Optimal Planning System (SAROPS)"
+[5]: https://navcen.uscg.gov/sites/default/files/pdf/Theory_of_Search.pdf "The Theory of Search - A Simplified Explanation - navcen"
+[6]: https://www.register-iri.com/wp-content/uploads/MSC.1-Circ.1686.pdf "MSC.1/Circ.1686 27 January 2025 AMENDMENTS TO ..."

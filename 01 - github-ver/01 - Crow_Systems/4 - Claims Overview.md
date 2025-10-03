@@ -1,11 +1,11 @@
-# Claims Overview
+# Claims Overview #
 
-## Research Program Overview
+## Research Program Overview ##
 
 We'll validate each core claim with multiple independent evidence types:
 literature + bench tests + controlled drills + witnessed sea trials + audited data. Below is the map.
 
-## 1 - Drones cut time-to-first-visual (TTFV) dramatically
+## 1 - Drones cut time-to-first-visual (TTFV) dramatically ##
 
 What to research:
 
@@ -15,20 +15,17 @@ What to research:
 How to support:
 
 - **Controlled A/B drills** on partner vessels: run standard MOB drill (no drone) vs identical drill with `CROW`.
-  - Randomize order; repeat across conditions.
+    - Randomize order; repeat across conditions.
 - **Metrics captured:** TTFV, time-to-GPS-fix, time-to-buoy-drop, time-to-handoff to boat.
 - **Analysis:** paired comparison with confidence intervals; bootstrap for robustness; pre-registered analysis plan.
 - **Third-party witness:** class society surveyor or maritime test lab present for a subset; signed witness statements.
 
 Success criteria:
-
-- Median TTFV reduction ≥ 60% (night) and ≥ 40% (day) vs baseline, sustained across ≥ 20 drills.
+    - Median TTFV reduction ≥ 60% (night) and ≥ 40% (day) vs baseline, sustained across ≥ 20 drills.
 
 ---
 
-## [[02 - obsidian-ver/Research/3 - Claims/2 - Detection Probability]] - “Detection probability (Pdet) is high with low false positives.”
-
-What to research:
+## /Users/deadcoast/Crow-Drone-Systems/01 - github-ver/02 - Research/2 - Bench & Enviornmental Test Plan.md ##
 
 - Realistic detection across **thermal/RGB** in varying sea states, lighting, and clothing.
 - False positive sources (whitecaps, kelp, birds, glare).
@@ -46,9 +43,7 @@ Metrics:
 
 ---
 
-## [[02 - obsidian-ver/Research/2 - Evidence Block/3 - Evidence]] - “Auto-launch, then human-in-the-loop is safer and faster.”
-
-What to research:
+## /Users/deadcoast/Crow-Drone-Systems/01 - github-ver/02 - Research/2 - Evidence Block/3 - Evidence.md ##
 
 - Reliability of **auto-launch + bounded IRD**.
 - **Pilot takeover latency** (alarm→pilot in command).
@@ -62,7 +57,7 @@ How to support:
 
 ---
 
-## [[02 - obsidian-ver/Crow_Systems/4 - Claims Overview]] - “`CROW` remains effective in real maritime conditions.”
+## /Users/deadcoast/Crow-Drone-Systems/01 - github-ver/01 - Crow_Systems/4 - Claims Overview.md ##
 
 What to research:
 
@@ -72,12 +67,12 @@ How to support:
 
 - **Environmental tests:** salt-fog (ASTM B117), ingress (IP), vibration, rain/spray rigs.
 - **Sea trials:** launches while ship maintains 3–5 kn headway;
-  - precision dock returns; turbulence handling on leeward/windward sides.
+    - precision dock returns; turbulence handling on leeward/windward sides.
 - **Failure-mode analysis (FMEA)** with mitigations validated (e.g., beacon-only behavior in high winds).
 
 ---
 
-## [[02 - obsidian-ver/Research/3 - Claims/5 - Tool Deployment]] - “Buoy/dye/strobe deployment improves survival odds.”
+## /Users/deadcoast/Crow-Drone-Systems/01 - github-ver/04 - Claims/5 - Tool Deployment.md ##
 
 What to research:
 
@@ -87,12 +82,12 @@ How to support:
 
 - **Drop accuracy tests** (CEP ≤ 10 m 95%) using up-drift aim points.
 - **Visibility studies:** observer trials from:
-  - Rescue boat/bridge rating detectability
-  - With vs without dye/strobe at set ranges
+    - Rescue boat/bridge rating detectability
+    - With vs without dye/strobe at set ranges
 
 ---
 
-## [[02 - obsidian-ver/Research/3 - Claims/6 - Probability over Uniform Patterns]] - “Probability-weighted search beats uniform patterns.”
+## /Users/deadcoast/Crow-Drone-Systems/01 - github-ver/04 - Claims/6 - Probability over Uniform Patterns.md ##
 
 What to research:
 
@@ -105,28 +100,28 @@ How to support:
 
 ---
 
-## 7) Claim: “Integration aligns with SOLAS/LSA and insurer expectations”
+## /Users/deadcoast/Crow-Drone-Systems/01 - github-ver/04 - Claims/7 - Integration aligns with SOLAS/LSA and insurer expectations.md ##
 
 What to research:
 
 - Regulatory landscape:
-  - SOLAS Ch. III & LSA Code (
-  - rescue boats, MOB detection)
-  - flag-state circulars
-  - class guidance for auxiliary lifesaving equipment
+    - SOLAS Ch. III & LSA Code (
+    - rescue boats, MOB detection)
+    - flag-state circulars
+    - class guidance for auxiliary lifesaving equipment
 
 - Insurer requirements for “reasonable available technology.”
 
 How to support:
 
 - **Regulatory matrix** mapping each `CROW` function to current clauses;
-  - document that `CROW` is **auxiliary** (not replacing boats).
+    - document that `CROW` is **auxiliary** (not replacing boats).
 - **Letters of no-objection / statements of intent** from class societies after design review.
 - **Risk assessment** and SOPs validated in witnessed drills.
 
 ---
 
-## 8) Claim: “Cost/benefit and PR risk reduction are compelling”
+## /Users/deadcoast/Crow-Drone-Systems/01 - github-ver/04 - Claims/8 - Cost/benefit and PR risk reduction are compelling.md ##
 
 What to research:
 
@@ -141,57 +136,57 @@ How to support:
 
 ---
 
-## Evidence production plan
+## Evidence production plan ##
 
-### Phase 0 — Desk research
+### Phase 0 — Desk research ##
 
 - Literature review:
-  - MOB survivability (cold shock/hypothermia)
-  - SAR drift (SAROPS)
-  - thermal detection at sea
-  - existing MOB camera systems
+    - MOB survivability (cold shock/hypothermia)
+    - SAR drift (SAROPS)
+    - thermal detection at sea
+    - existing MOB camera systems
 
 - Regulatory map:
-  - SOLAS/LSA
-  - MSC circulars
-  - flag-state notes
-  - class (DNV/ABS/LR) relevant test standards
+    - SOLAS/LSA
+    - MSC circulars
+    - flag-state notes
+    - class (DNV/ABS/LR) relevant test standards
 
 - Deliverable: **Evidence Landscape Brief** (citations + gaps).
 
-### Phase 1 — Bench & environmental
+### Phase 1 — Bench & environmental ##
 
 - Dock life-cycle (≥500 auto launch/land), ingress, salt-fog, vibration.
 - Radio link and video latency measurements.
 - Deliverable: **Bench Test Report** with pass/fail + photos/videos.
 
-### Phase 2 — Harbor trials
+### Phase 2 — Harbor trials ##
 
 - Controlled mannequin placements; day/night; sea states 1–3.
 - Build the labeled dataset; tune detector thresholds; initial ROC.
 - Deliverable: **Harbor Trial Report** (TTFV, Pdet/FPR, ROC; video reels).
 
-### Phase 3 — Open-sea trials
+### Phase 3 — Open-sea trials ##
 
 - Partner vessel runs randomized A/B MOB drills (baseline vs `CROW`).
 - Include moving-ship launches @ 3–5 kn; Sea State 2–5; downwind/down-current placements; dye/strobe tests.
 - Witnessed subset with class society/independent lab.
 - Deliverable: **Sea Trial Report** + **Witness Statements**.
 
-### Phase 4 — Comparative analysis & whitepaper
+### Phase 4 — Comparative analysis & whitepaper ##
 
 - Stats (paired tests, CI/bootstraps), effect sizes, limitations.
 - Risk assessment + SOP refinements; maintenance schedule.
 - Deliverables:
 
-  - **Peer-style Whitepaper** (methods, results, limitations).
-  - **Operator SOP Pack** (drills, checklists, envelopes).
-  - **Insurer Pack** (loss modeling, EV, compliance mapping).
-  - **Class Submission Dossier** (drawings, FMEA, test evidence).
+    - **Peer-style Whitepaper** (methods, results, limitations).
+    - **Operator SOP Pack** (drills, checklists, envelopes).
+    - **Insurer Pack** (loss modeling, EV, compliance mapping).
+    - **Class Submission Dossier** (drawings, FMEA, test evidence).
 
 ---
 
-## Data integrity & trust
+## Data integrity & trust ##
 
 - **Pre-registered protocol** (timestamped) to avoid post-hoc cherry-picking.
 - **Immutable logs:** signed telemetry & video hashes; provide raw data excerpts.
@@ -200,7 +195,7 @@ How to support:
 
 ---
 
-## KPIs & acceptance thresholds (examples you can tune)
+## KPIs & acceptance thresholds (examples you can tune) ##
 
 - TTFV median reduction ≥ 50% overall; ≥ 60% at night.
 - Pdet ≥ 0.8 within 400 m; FPR ≤ 0.2/min (human-verified).
@@ -210,7 +205,7 @@ How to support:
 
 ---
 
-## Artifacts you’ll hand decision-makers
+## Artifacts you’ll hand decision-makers ##
 
 - **Video demo reel:** side-by-side baseline vs `CROW` overlays.
 - **One-page results sheet:** clear plot of TTFV reductions + ROC curves.
@@ -220,13 +215,13 @@ How to support:
 
 ---
 
-## Resourcing & partnerships
+## Resourcing & partnerships ##
 
 - **Partners needed:**
-  - one cruise line for drills
-  - one maritime test lab
-  - one class society for witness days
-  - one insurer observer
+    - one cruise line for drills
+    - one maritime test lab
+    - one class society for witness days
+    - one insurer observer
 
 - **Procurement:** certified MOB mannequins, dye/smoke (SOLAS), measurement gear, environmental test house time.
 
