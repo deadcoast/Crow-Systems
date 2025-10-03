@@ -20,6 +20,6 @@ docs/build/
 
 # META files
 01 - github-ver/99 - META/
-02 - obsidian-ver/99 - META/
-# Obsidian Version
-02 - obsidian-ver/
+
+# Obsidian Version - ignore entire directory
+02 - obsidian-ver/**
