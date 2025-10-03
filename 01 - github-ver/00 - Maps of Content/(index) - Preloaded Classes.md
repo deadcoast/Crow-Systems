@@ -3,7 +3,6 @@ date: 2025-10-02T02:58
 tags: [MOC]
 cssclasses:
   - crow_index
-  - monday
 ---
 
 - [202401211512 Notebook CSS Classes](99%20-%20META/Preloaded%20Classes/202401211512%20Notebook%20CSS%20Classes.md)

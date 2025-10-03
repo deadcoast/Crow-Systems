@@ -3,7 +3,6 @@ date: 2025-10-02T03:16
 tags: [MOC]
 cssclasses:
   - crow_index
-  - saturday
 ---
 
 # 00 - Maps of Content #

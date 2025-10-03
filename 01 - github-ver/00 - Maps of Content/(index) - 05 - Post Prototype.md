@@ -3,7 +3,6 @@ date: 2025-10-02T02:58
 tags: [MOC]
 cssclasses:
   - crow_index
-  - monday
 ---
 
 # 05 - Post Prototype #

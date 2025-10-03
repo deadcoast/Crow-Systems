@@ -3,7 +3,6 @@ date: 2025-10-02T02:58
 tags: [MOC]
 cssclasses:
   - crow_index
-  - monday
 ---
 
 - [1 - Drones cut time](04%20-%20Claims/1%20-%20Drones%20cut%20time.md)
